@@ -5,7 +5,7 @@ baseurl                  : "/academic-website"
 repository               : "nsada2025/academic-website"
 
 locale                   : "en-US"
-theme                    : "academicpages"
+remote_theme             : academicpages/academicpages.github.io
 
 navbar-links:
   About Me: "/"
