@@ -6,6 +6,8 @@
 # `jekyll serve -l -H localhost`. If you change this file, please restart the 
 # server process.
 navbar-links:
+  About Me: "/"
+  CV: "/cv/"
   Learning Journey: "/learning/"
 
 
