@@ -1,5 +1,5 @@
-title                    : "Naoki Sada's Academic Page"
-description              : "Learning journey and research"
+title                    : "Naoki Sada | Neuroscience PhD Student"
+description              : "PhD student at Osaka University studying dopamine dynamics in reward learning and habit formation"
 url                      : "https://nsada2025.github.io"
 baseurl                  : "/academic-website"
 repository               : "nsada2025/academic-website"
@@ -13,13 +13,14 @@ navbar-links:
   Learning Journey: "/learning/"
 
 author:
-  name             : "Naoki Sada"
+  name             : "Naoki Sada, M.D."
   avatar           : "profile.png"
-  bio              : "PhD student in neuroscience"
-  email            : "none@example.org"
+  bio              : "PhD student studying neurodegeneration and protein aggregation at Osaka University | JSPS Research Fellow (DC1)"
+  location         : "Osaka, Japan"
+  email            : "nsada [at] molneu.med.osaka-u.ac.jp"
   github           : "nsada2025"
   googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0000-0000-0000"
 
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
