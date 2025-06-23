@@ -39,7 +39,7 @@ I also contribute to evidence-based medicine as a member of the Chronic Lung Dis
 
 ## Contact
 
-I am always interested in discussing research collaborations, particularly in the areas of neurodegeneration, protein aggregation, and translational neuroscience. Please feel free to reach out through the contact information in my profile.
+I am always interested in discussing research collaborations, particularly in the areas of neurodegeneration, protein aggregation, and translational neuroscience. Please feel free to reach out at naoki.s.sound.of.sil@gmail.com.
 
 ---
 
