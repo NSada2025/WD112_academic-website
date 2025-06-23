@@ -1,0 +1,125 @@
+/* ==========================================================================
+   CUSTOM STYLES
+   ========================================================================== */
+
+/* Author profile image size adjustment */
+.author__avatar {
+  display: table-cell;
+  vertical-align: top;
+  width: 36px;
+  height: 36px;
+
+  @include breakpoint($large) {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  img {
+    max-width: 150px;
+    border-radius: 50%;
+
+    @include breakpoint($large) {
+      padding: 5px;
+      border: 1px solid $border-color;
+    }
+  }
+}
+
+/* Sidebar author profile adjustments */
+.sidebar .author__avatar img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation bar improvements */
+.masthead {
+  background: #fff;
+  border-bottom: 1px solid $border-color;
+  
+  &__inner-wrap {
+    @include clearfix;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: $sans-serif-narrow;
+  }
+}
+
+/* Improve navigation visibility */
+.greedy-nav {
+  a {
+    color: $text-color;
+    font-weight: 400;
+    
+    &:hover {
+      color: $link-color-hover;
+      text-decoration: underline;
+    }
+  }
+  
+  .visible-links {
+    a:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      background: $link-color;
+      width: 0;
+      transition: width 0.3s ease;
+    }
+    
+    a:hover:before {
+      width: 100%;
+    }
+  }
+}
+
+/* Main content area adjustments */
+#main {
+  @include clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  animation: intro 0.3s both;
+  animation-delay: 0.15s;
+
+  @include breakpoint($large) {
+    max-width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+/* Page content width optimization */
+.page {
+  @include breakpoint($large) {
+    float: right;
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-right: $right-sidebar-width-narrow;
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+    padding-right: $right-sidebar-width;
+  }
+}
+
+/* Improve readability */
+.page__content {
+  h2 {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid $border-color;
+  }
+  
+  p {
+    font-size: $type-size-5;
+    line-height: 1.8;
+  }
+}
