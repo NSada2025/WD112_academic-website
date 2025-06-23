@@ -13,6 +13,35 @@ I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neu
 
 ## 📍 Research Timeline & Evolution
 
+<div class="mermaid">
+timeline
+    title My Research Journey: From Molecular Mechanisms to Systems Understanding
+    
+    2015-2021 : Medical School
+                : HDAC Research
+                : Cell Death & Disease Publication
+                : Liverpool Internship
+                : Yamamura Prize
+    
+    2021-2023 : Clinical Training
+                : Osaka University Hospital
+                : Toneyama Hospital
+                : Neurodegenerative Disease Experience
+                : Research Interest Awakening
+    
+    2023-2025 : PhD Research (Current)
+                : MSA Molecular Mechanisms
+                : Sphingolipid Pathway Discovery
+                : Huntington's Disease Collaboration
+                : JSPS DC1 Fellowship
+    
+    2025- : New Chapter
+           : Toneyama Hospital Clinical Position
+           : Active Inference Framework
+           : Higher Brain Functions
+           : Clinical-Research Integration
+</div>
+
 ### 🎓 **2015-2021: Medical School & Foundation Research**
 **Osaka University Faculty of Medicine**
 - **Research Focus**: Histone deacetylase (HDAC) in neuronal rewiring after traumatic brain injury
@@ -42,6 +71,34 @@ I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neu
 - **Research Track**: Paradigm shift to higher brain functions
   - Embracing Active Inference framework
   - Exploring consciousness and cognitive functions through predictive processing
+
+## Research Evolution: From Molecules to Mind
+
+<div class="mermaid">
+graph LR
+    A[2015-2021<br/>HDAC Research] -->|Clinical Training| B[2021-2023<br/>Patient Experience]
+    B -->|PhD Start| C[2023-2024<br/>MSA Research]
+    C -->|Paradigm Shift| D[2025-<br/>Active Inference]
+    
+    A -->|Foundation| E[Molecular Biology<br/>Protein Function]
+    B -->|Insight| F[Clinical Needs<br/>Disease Mechanisms]
+    C -->|Discovery| G[Protein Aggregation<br/>Lipid Metabolism]
+    D -->|Integration| H[Systems Neuroscience<br/>Consciousness]
+    
+    E --> I[Cell Death & Disease<br/>Publication]
+    F --> J[Neurodegenerative<br/>Disease Focus]
+    G --> K[JSPS DC1<br/>Fellowship]
+    H --> L[Dual-Track<br/>Approach]
+    
+    style A fill:#e1f5fe
+    style B fill:#b3e5fc
+    style C fill:#81d4fa
+    style D fill:#4fc3f7
+    style E fill:#fff3e0
+    style F fill:#ffe0b2
+    style G fill:#ffcc80
+    style H fill:#ffb74d
+</div>
 
 ## Current Research Focus
 
