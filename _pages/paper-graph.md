@@ -3,6 +3,7 @@ layout: single
 title: "Paper Network Graph"
 permalink: /paper-graph/
 author_profile: true
+excerpt: "Interactive visualization of research papers and their connections, showing the network of ideas linking neuroscience, methods, and theories."
 ---
 
 # Research Paper Network

@@ -3,6 +3,7 @@ layout: single
 title: Learning Journey
 permalink: /learning/
 author_profile: true
+excerpt: "Documenting the formative intellectual experiences that shaped my approach to neuroscience and research. From active inference to medical writing."
 ---
 
 # Intellectual Formation: A Personal Academic Journey

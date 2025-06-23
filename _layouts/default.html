@@ -13,10 +13,13 @@ layout: compress
 
   <body>
 
+    {% include skip-links.html %}
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    {{ content }}
+    <main id="main" role="main">
+      {{ content }}
+    </main>
 
     <div class="page__footer">
       <footer>

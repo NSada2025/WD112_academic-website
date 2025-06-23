@@ -5,6 +5,7 @@ permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
+excerpt: "Curriculum Vitae of Naoki Sada, M.D., PhD student at Osaka University Graduate School of Medicine. Research focus on neurodegeneration and protein aggregation."
 ---
 
 {% include base_path %}

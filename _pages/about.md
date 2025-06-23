@@ -5,6 +5,7 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+excerpt: "Naoki Sada is a neuroscience PhD student at Osaka University studying neurodegeneration, protein aggregation, and active inference. JSPS Research Fellow DC1."
 ---
 
 # About Me
