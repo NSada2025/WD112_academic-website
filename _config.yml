@@ -5,12 +5,10 @@ baseurl                  : "/academic-website"
 repository               : "NSada2025/academic-website"
 
 locale                   : "en-US"
-remote_theme             : academicpages/academicpages.github.io
+remote_theme             : "academicpages/academicpages.github.io"
+theme                    : "minimal-mistakes-jekyll"
 
-navbar-links:
-  About Me: "/"
-  CV: "/cv/"
-  Learning Journey: "/learning/"
+# Navigation is configured in _data/navigation.yml
 
 author:
   name             : "Naoki Sada, M.D."
@@ -53,3 +51,5 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-remote-theme
+  - jekyll-include-cache

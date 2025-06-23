@@ -21,7 +21,7 @@
 
     @include breakpoint($large) {
       padding: 5px;
-      border: 1px solid $border-color;
+      border: 1px solid var(--global-border-color);
     }
   }
 }
@@ -36,7 +36,7 @@
 /* Navigation bar improvements */
 .masthead {
   background: #fff;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid var(--global-border-color);
   
   &__inner-wrap {
     @include clearfix;
@@ -46,18 +46,18 @@
     max-width: 100%;
     display: flex;
     justify-content: space-between;
-    font-family: $sans-serif-narrow;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
   }
 }
 
 /* Improve navigation visibility */
 .greedy-nav {
   a {
-    color: $text-color;
+    color: var(--global-text-color);
     font-weight: 400;
     
     &:hover {
-      color: $link-color-hover;
+      color: var(--global-link-color-hover);
       text-decoration: underline;
     }
   }
@@ -69,7 +69,7 @@
       left: 0;
       bottom: 0;
       height: 4px;
-      background: $link-color;
+      background: var(--global-link-color);
       width: 0;
       transition: width 0.3s ease;
     }
@@ -101,13 +101,13 @@
 .page {
   @include breakpoint($large) {
     float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
+    width: calc(100% - 200px);
+    padding-right: 200px;
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+    width: calc(100% - 300px);
+    padding-right: 300px;
   }
 }
 
@@ -115,11 +115,11 @@
 .page__content {
   h2 {
     padding-bottom: 0.5em;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid var(--global-border-color);
   }
   
   p {
-    font-size: $type-size-5;
+    font-size: 0.9em;
     line-height: 1.8;
   }
 }
