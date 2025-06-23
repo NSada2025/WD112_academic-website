@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: single
 title: Learning Journey
 permalink: /learning/
+author_profile: true
 ---
 
 # Intellectual Formation: A Personal Academic Journey
@@ -37,7 +38,7 @@ This page documents the formative intellectual experiences that have shaped my a
 - **Lasting Impact**: Developed a systematic approach to scientific writing that views publication as dialogue within the research community. The concept of building a personal "expression dictionary" fundamentally changed how I approach both reading and writing scientific literature.
 
 ### 大阪大学 TRACS (Translational Research Training Program)
-- **Directors**: Prof. Keiko Fukuda, Prof. Yasuaki Kumamoto
+- **Directors**: Prof. Keiko Fukuda, Associate Prof. Yasuaki Kumamoto
 - **Focus**: Medical device development, regulatory science, intellectual property
 - **Transformative Aspect**: Bridged the gap between basic research and clinical application. The program's emphasis on regulatory pathways and commercialization provided essential context for translating neuroscience discoveries into therapeutic interventions.
 
@@ -67,12 +68,10 @@ This page documents the formative intellectual experiences that have shaped my a
 ### Editorial Insights Series
 
 #### *Scientific Publishing at JEM: What, How and Why?* (2024)
-- **Speakers**: Journal of Experimental Medicine Editorial Board
 - **Key Takeaway**: Understanding editorial decision-making processes and impact criteria
 - **Application**: Refined manuscript preparation strategies and research narrative construction
 
 #### *Into the Abyss: Understanding Journal Strategies* (2023)
-- **Speakers**: Multiple journal Scientific Editors
 - **Revelation**: The political economy of scientific publishing and its influence on knowledge production
 - **Strategic Impact**: Informed approach to publication planning and career development
 

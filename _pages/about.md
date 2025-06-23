@@ -9,19 +9,49 @@ redirect_from:
 
 # About Me
 
-I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neuroscience at Osaka University Graduate School of Medicine. Currently, I am conducting research in the Yamashita laboratory, where I study the molecular mechanisms underlying neurodegenerative diseases, particularly multiple system atrophy (MSA).
+I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neuroscience at Osaka University Graduate School of Medicine. Currently, I am conducting research in the Yamashita laboratory, where I study the molecular mechanisms underlying neurodegenerative diseases and higher brain functions through the lens of active inference theory.
 
-## Research Focus
+## 📍 Research Timeline & Evolution
 
-My current research focuses on understanding the role of chaperone proteins in the cytotoxic and propagative characteristics of protein aggregates in MSA. Through comprehensive omics analysis, I have discovered disruptions in sphingolipid metabolic pathways that may contribute to disease pathogenesis. This work is supported by a [JSPS Research Fellowship for Young Scientists (DC1)](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1662/).
+### 🎓 **2015-2021: Medical School & Foundation Research**
+**Osaka University Faculty of Medicine**
+- **Research Focus**: Histone deacetylase (HDAC) in neuronal rewiring after traumatic brain injury
+- **Key Achievement**: Publication in *Cell Death & Disease* 
+- **International Experience**: Research internship at University of Liverpool (protein crystallography)
+- **Recognition**: Yamamura Prize for academic excellence (top 3/115 graduates)
 
-Previously, during my undergraduate research, I investigated the role of histone deacetylase (HDAC) in neuronal rewiring following traumatic brain injury, which resulted in a publication in Cell Death & Disease.
+### 🏥 **2021-2023: Clinical Training & Awakening**
+**Osaka University Hospital & Toneyama National Hospital**
+- Gained hands-on clinical experience with neurodegenerative disease patients
+- Developed deep interest in understanding the mechanisms of MSA and Huntington's disease
+- Recognized the gap between clinical needs and basic research
 
-## Academic Journey
+### 🔬 **2023-Present: PhD Research Journey**
+**Yamashita Laboratory, Osaka University**
+- **Primary Focus**: Multiple System Atrophy (MSA)
+  - Discovered disruptions in sphingolipid metabolic pathways through comprehensive omics analysis
+  - Investigating chaperone proteins in protein aggregate cytotoxicity and propagation
+- **Secondary Project**: Huntington's disease collaborative research
+- **Support**: JSPS Research Fellowship DC1 ([KAKENHI-24KJ1662](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1662/))
 
-My path in medicine and neuroscience began at Osaka University Faculty of Medicine, where I earned my M.D. degree in 2021, receiving the prestigious Yamamura Prize for academic excellence. This journey has taken me from clinical training at Osaka University Hospital and Toneyama National Hospital to fundamental research in molecular neuroscience.
+### 🚀 **2025.4-: New Chapter Beginning**
+**Dual-Track Approach**
+- **Clinical Track**: Starting position at Toneyama National Hospital
+  - Direct patient care for neurodegenerative diseases
+  - Bridging clinical insights with research
+- **Research Track**: Paradigm shift to higher brain functions
+  - Embracing Active Inference framework
+  - Exploring consciousness and cognitive functions through predictive processing
 
-A formative experience was my research internship at the University of Liverpool's Barkla X-ray Laboratory of Biophysics, supported by the Kishimoto International Exchange Scholarship, where I gained expertise in protein crystallography and structural biology.
+## Current Research Focus
+
+My research has evolved from molecular mechanisms to systems-level understanding:
+
+1. **Molecular Level**: Protein aggregation and cellular pathology in MSA
+2. **Systems Level**: Active inference and predictive processing in brain function
+3. **Clinical Translation**: Applying insights to patient care at Toneyama Hospital
+
+This integrative approach allows me to tackle neurodegenerative diseases from multiple perspectives, combining molecular biology, computational neuroscience, and clinical practice.
 
 ## Beyond Research
 
@@ -31,7 +61,7 @@ I also contribute to evidence-based medicine as a member of the Chronic Lung Dis
 
 ## Recognition & Awards
 
-- JSPS Research Fellowship for Young Scientists (DC1) with Grant-in-Aid ([KAKENHI-PROJECT-24KJ1662](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1662/), 4,400,000 JPY for 3 years)
+- JSPS Research Fellowship for Young Scientists (DC1) with Grant-in-Aid (4,400,000 JPY for 3 years)
 - Yamamura Prize (graduation honors, top 3 out of 115 graduates)
 - Junior Investigator Poster Award, Japan Neuroscience Society
 - Pathophysiology Excellence Award, Japanese Association of Anatomists
@@ -39,7 +69,7 @@ I also contribute to evidence-based medicine as a member of the Chronic Lung Dis
 
 ## Contact
 
-I am always interested in discussing research collaborations, particularly in the areas of neurodegeneration, protein aggregation, and translational neuroscience. Please feel free to reach out at naoki.s.sound.of.sil@gmail.com.
+I am always interested in discussing research collaborations, particularly in the areas of neurodegeneration, protein aggregation, active inference, and translational neuroscience. Please feel free to reach out at naoki.s.sound.of.sil@gmail.com.
 
 ---
 
