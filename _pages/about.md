@@ -13,7 +13,7 @@ I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neu
 
 ## Research Focus
 
-My current research focuses on understanding the role of chaperone proteins in the cytotoxic and propagative characteristics of protein aggregates in MSA. Through comprehensive omics analysis, I have discovered disruptions in sphingolipid metabolic pathways that may contribute to disease pathogenesis. This work is supported by a JSPS Research Fellowship for Young Scientists (DC1).
+My current research focuses on understanding the role of chaperone proteins in the cytotoxic and propagative characteristics of protein aggregates in MSA. Through comprehensive omics analysis, I have discovered disruptions in sphingolipid metabolic pathways that may contribute to disease pathogenesis. This work is supported by a [JSPS Research Fellowship for Young Scientists (DC1)](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1662/).
 
 Previously, during my undergraduate research, I investigated the role of histone deacetylase (HDAC) in neuronal rewiring following traumatic brain injury, which resulted in a publication in Cell Death & Disease.
 
@@ -31,7 +31,7 @@ I also contribute to evidence-based medicine as a member of the Chronic Lung Dis
 
 ## Recognition & Awards
 
-- JSPS Research Fellowship for Young Scientists (DC1) with Grant-in-Aid (4,400,000 JPY for 3 years)
+- JSPS Research Fellowship for Young Scientists (DC1) with Grant-in-Aid ([KAKENHI-PROJECT-24KJ1662](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1662/), 4,400,000 JPY for 3 years)
 - Yamamura Prize (graduation honors, top 3 out of 115 graduates)
 - Junior Investigator Poster Award, Japan Neuroscience Society
 - Pathophysiology Excellence Award, Japanese Association of Anatomists

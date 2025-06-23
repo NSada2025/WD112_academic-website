@@ -34,7 +34,7 @@ redirect_from:
 * **PhD Research**, Yamashita Laboratory, Osaka University, Apr 2023 - Present
   * Investigating the role of chaperone proteins in the cytotoxic and propagative hallmarks of fibrils in multiple system atrophy (MSA)
   * Conducting omics analysis revealing disrupted sphingolipid metabolic pathways in MSA
-  * Recipient of Grant-in-Aid for JSPS Research Fellows (4,400,000 JPY for 3 years)
+  * Recipient of Grant-in-Aid for JSPS Research Fellows ([KAKENHI-PROJECT-24KJ1662](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1662/), 4,400,000 JPY for 3 years)
 
 * **Undergraduate Research**, Yamashita Laboratory, Osaka University, Apr 2017 - Mar 2021
   * Studied the role of histone deacetylase (HDAC) in neuronal rewiring after traumatic brain injury (TBI)
@@ -94,7 +94,7 @@ redirect_from:
 
 ## Awards & Honors
 ------
-* **JSPS Research Fellowship for Young Scientists (DC1)**, 2023-2026
+* **JSPS Research Fellowship for Young Scientists (DC1)**, 2023-2026 ([KAKENHI-PROJECT-24KJ1662](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1662/))
 * **Yamamura Prize** (graduation honors), Osaka University Faculty of Medicine, 2021
 * **Pathophysiology Excellence Award**, Japanese Association of Anatomists, 2021
 * **Junior Investigator Poster Award**, Japan Neuroscience Society, 2018
