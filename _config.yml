@@ -1,7 +1,7 @@
 title                    : "Naoki Sada | Neuroscience PhD Student"
 description              : "PhD student at Osaka University studying dopamine dynamics in reward learning and habit formation"
 url                      : "https://nsada2025.github.io"
-baseurl                  : "/academic-website"
+baseurl                  : ""
 repository               : "nsada2025/academic-website"
 
 locale                   : "en-US"
@@ -14,7 +14,7 @@ navbar-links:
 
 author:
   name             : "Naoki Sada, M.D."
-  avatar           : "profile.png"
+  avatar           : "https://avatars.githubusercontent.com/u/175803742"  # GitHub avatar as stable fallback
   bio              : "3rd year PhD student studying neurodegeneration and protein aggregation at Osaka University | JSPS Research Fellow (DC1)"
   location         : "Osaka, Japan"
   email            : "naoki.s.sound.of.sil@gmail.com"
