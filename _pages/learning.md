@@ -19,8 +19,12 @@ This page documents the formative intellectual experiences that have shaped my a
 
 ### 無意識の脳 自己意識の脳 (*The Feeling of What Happens*)
 - **Author**: Antonio Damasio
-- **Core Insight**: The biological foundations of consciousness and the construction of self
-- **Impact on My Research**: Damasio's framework connecting emotion, body states, and consciousness provides crucial context for understanding neurodegenerative diseases. His insights into how the brain creates a sense of self are particularly relevant to my MSA research, where self-awareness may be preserved despite severe motor dysfunction.
+- **Core Insight**: Consciousness as a two-layered structure (core consciousness and extended consciousness) built upon the embodied self
+- **Key Concepts**: 
+  - Proto-self → Core self → Autobiographical self
+  - First-order and second-order neural mappings
+  - Consciousness emerging from organism-object interactions
+- **Impact on My Research**: Damasio's framework of layered consciousness provides a crucial theoretical foundation for understanding how self-awareness can be preserved in neurodegenerative diseases like MSA, despite severe motor dysfunction. His emphasis on the body-brain unity challenges purely brain-centric approaches to neurodegeneration.
 
 
 ---
