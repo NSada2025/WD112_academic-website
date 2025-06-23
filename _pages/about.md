@@ -9,7 +9,7 @@ redirect_from:
 
 # About Me
 
-I am Naoki Sada, M.D., a 2nd year PhD student in the Department of Molecular Neuroscience at Osaka University Graduate School of Medicine. Currently, I am conducting research in the Yamashita laboratory, where I study the molecular mechanisms underlying neurodegenerative diseases, particularly multiple system atrophy (MSA).
+I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neuroscience at Osaka University Graduate School of Medicine. Currently, I am conducting research in the Yamashita laboratory, where I study the molecular mechanisms underlying neurodegenerative diseases, particularly multiple system atrophy (MSA).
 
 ## Research Focus
 

@@ -11,7 +11,7 @@ redirect_from:
 
 ## Education
 ------
-* **Ph.D. in Molecular Neuroscience**, Osaka University Graduate School of Medicine, 2023 - Present
+* **Ph.D. in Molecular Neuroscience**, Osaka University Graduate School of Medicine, 2023 - Present (3rd year)
   * Department of Molecular Neuroscience
   * JSPS Research Fellowship for Young Scientists (DC1)
   * Advisor: Prof. Toshihide Yamashita
