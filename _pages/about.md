@@ -14,32 +14,27 @@ I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neu
 ## 📍 Research Timeline & Evolution
 
 <div class="mermaid">
-timeline
-    title My Research Journey: From Molecular Mechanisms to Systems Understanding
+gantt
+    title Research Journey Timeline
+    dateFormat  YYYY
+    axisFormat  %Y
     
-    2015-2021 : Medical School
-                : HDAC Research
-                : Cell Death & Disease Publication
-                : Liverpool Internship
-                : Yamamura Prize
+    section Medical School
+    HDAC Research           :done, hdac, 2015, 2021
+    Liverpool Internship    :done, liverpool, 2019, 2020
     
-    2021-2023 : Clinical Training
-                : Osaka University Hospital
-                : Toneyama Hospital
-                : Neurodegenerative Disease Experience
-                : Research Interest Awakening
+    section Clinical Training  
+    Osaka Univ Hospital     :done, ouh, 2021, 2022
+    Toneyama Hospital       :done, tnh, 2022, 2023
     
-    2023-2025 : PhD Research (Current)
-                : MSA Molecular Mechanisms
-                : Sphingolipid Pathway Discovery
-                : Huntington's Disease Collaboration
-                : JSPS DC1 Fellowship
+    section PhD Research
+    MSA Research            :active, msa, 2023, 2025
+    Huntington's Disease    :active, hd, 2023, 2025
+    JSPS DC1 Fellowship     :active, jsps, 2024, 2027
     
-    2025- : New Chapter
-           : Toneyama Hospital Clinical Position
-           : Active Inference Framework
-           : Higher Brain Functions
-           : Clinical-Research Integration
+    section New Chapter
+    Toneyama Clinical       :crit, tc, 2025, 2027
+    Active Inference        :crit, ai, 2025, 2027
 </div>
 
 ### 🎓 **2015-2021: Medical School & Foundation Research**
