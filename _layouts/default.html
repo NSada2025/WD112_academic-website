@@ -11,7 +11,7 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body data-page="{% if page.url == '/' %}home{% elsif page.url contains '/research-timeline' %}research{% elsif page.url contains '/publications' %}publications{% elsif page.url contains '/cv' %}cv{% elsif page.url contains '/year-archive' %}writing{% else %}default{% endif %}">
 
     {% include skip-links.html %}
     {% include browser-upgrade.html %}
