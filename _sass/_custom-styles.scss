@@ -85,18 +85,22 @@
 
 /* Navigation bar improvements */
 .masthead {
-  background: #fff;
-  border-bottom: 1px solid var(--global-border-color);
+  background: var(--bg-color-primary);
+  border-bottom: 1px solid var(--border-color-primary);
   
   &__inner-wrap {
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
+    padding: var(--space-sm);
     max-width: 100%;
     display: flex;
     justify-content: space-between;
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    
+    @include breakpoint($large) {
+      padding: var(--space-sm) var(--space-lg);
+    }
   }
 }
 
@@ -301,3 +305,46 @@ body {
 .mb-sm { margin-bottom: var(--space-sm); }
 .mb-md { margin-bottom: var(--space-md); }
 .mb-lg { margin-bottom: var(--space-lg); }
+
+/* Footer improvements */
+.page__footer {
+  background: var(--bg-color-secondary);
+  border-top: 1px solid var(--border-color-primary);
+  margin-top: var(--space-xl);
+  
+  footer {
+    padding: var(--space-lg) 0;
+    color: var(--text-color-secondary);
+    font-size: var(--font-size-sm);
+    
+    @include breakpoint($large) {
+      padding: var(--space-xl) 0;
+    }
+  }
+  
+  a {
+    color: var(--text-color-primary);
+    
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+/* Improve page spacing */
+.page {
+  padding-bottom: var(--space-xl);
+}
+
+/* Fix archive grid layout */
+.archive {
+  .grid__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-md);
+    
+    @include breakpoint($medium) {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+  }
+}
