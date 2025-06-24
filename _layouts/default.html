@@ -107,30 +107,37 @@ layout: compress
       
       function toggleColorPicker() {
         const panel = document.getElementById('colorPickerPanel');
-        panel.classList.toggle('show');
+        if (panel) {
+          panel.classList.toggle('show');
+          console.log('Color picker toggled:', panel.classList.contains('show'));
+        } else {
+          console.error('Color picker panel not found');
+        }
       }
       
-      // Handle color selection
-      document.querySelectorAll('.color-option').forEach(button => {
-        button.addEventListener('click', function() {
-          const color = this.getAttribute('data-color');
-          
-          // Remove active class from all buttons
-          document.querySelectorAll('.color-option').forEach(btn => {
-            btn.classList.remove('active');
+      // Handle color selection after DOM is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.color-option').forEach(button => {
+          button.addEventListener('click', function() {
+            const color = this.getAttribute('data-color');
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.color-option').forEach(btn => {
+              btn.classList.remove('active');
+            });
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Apply color
+            document.documentElement.setAttribute('data-color', color);
+            localStorage.setItem('color', color);
+            
+            // Close panel after selection
+            setTimeout(() => {
+              document.getElementById('colorPickerPanel').classList.remove('show');
+            }, 200);
           });
-          
-          // Add active class to clicked button
-          this.classList.add('active');
-          
-          // Apply color
-          document.documentElement.setAttribute('data-color', color);
-          localStorage.setItem('color', color);
-          
-          // Close panel after selection
-          setTimeout(() => {
-            document.getElementById('colorPickerPanel').classList.remove('show');
-          }, 200);
         });
       });
       
