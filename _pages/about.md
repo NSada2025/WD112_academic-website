@@ -14,6 +14,7 @@ I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neu
 
 ## 📍 Research Timeline & Evolution
 
+<!-- Mermaid diagram temporarily disabled for GitHub Pages
 <div class="mermaid">
 gantt
     title Research Journey Timeline
@@ -37,6 +38,7 @@ gantt
     Toneyama Clinical       :crit, tc, 2025, 2027
     Active Inference        :crit, ai, 2025, 2027
 </div>
+-->
 
 ### 🎓 **2015-2021: Medical School & Foundation Research**
 **Osaka University Faculty of Medicine**
@@ -70,6 +72,7 @@ gantt
 
 ## Research Evolution: From Molecules to Mind
 
+<!-- Mermaid diagram temporarily disabled for GitHub Pages
 <div class="mermaid">
 graph LR
     A[2015-2021<br/>HDAC Research] -->|Clinical Training| B[2021-2023<br/>Patient Experience]
@@ -95,6 +98,7 @@ graph LR
     style G fill:#ffcc80
     style H fill:#ffb74d
 </div>
+-->
 
 ## Current Research Focus
 
