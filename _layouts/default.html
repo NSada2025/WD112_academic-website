@@ -87,6 +87,8 @@ layout: compress
       
       // Wait for DOM to be ready
       document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded, setting up theme controls...');
+        
         // Mark active color
         const activeColor = document.querySelector(`[data-color="${currentColor}"]`);
         if (activeColor) {
@@ -95,8 +97,13 @@ layout: compress
         
         // Set up dark mode toggle
         const darkModeToggle = document.getElementById('darkModeToggle');
+        console.log('Dark mode toggle element:', darkModeToggle);
+        
         if (darkModeToggle) {
-          darkModeToggle.addEventListener('click', function() {
+          darkModeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Dark mode button clicked');
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             
@@ -107,12 +114,19 @@ layout: compress
             const icon = document.getElementById('dark-mode-icon');
             icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
           });
+        } else {
+          console.error('Dark mode toggle button not found!');
         }
         
         // Set up color picker toggle
         const colorPickerToggle = document.getElementById('colorPickerToggle');
+        console.log('Color picker toggle element:', colorPickerToggle);
+        
         if (colorPickerToggle) {
-          colorPickerToggle.addEventListener('click', function() {
+          colorPickerToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Color picker button clicked');
             const panel = document.getElementById('colorPickerPanel');
             if (panel) {
               panel.classList.toggle('show');
@@ -121,6 +135,8 @@ layout: compress
               console.error('Color picker panel not found');
             }
           });
+        } else {
+          console.error('Color picker toggle button not found!');
         }
         
         // Handle color selection
