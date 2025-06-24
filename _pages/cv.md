@@ -78,7 +78,8 @@ excerpt: "Curriculum Vitae of Naoki Sada, M.D., PhD student at Osaka University 
 ## Teaching Experience
 ------
 * **Teaching Assistant**, Aug 2024 - Present  
-  Training Program for Medical/Healthcare Device Startup CEOs  
+  メディカル・ヘルスケアデバイス　スタートアップ経営者育成プログラム  
+  (Training program for medical/healthcare device startup CEOs: "TRACS")  
   Osaka University Graduate School of Medicine
 
 ## Leadership & Service
@@ -104,7 +105,7 @@ excerpt: "Curriculum Vitae of Naoki Sada, M.D., PhD student at Osaka University 
 
 ## Professional Development
 ------
-* **Certificate**, Training Program for Medical/Healthcare Device Startup CEOs, Sep 2023 - Jun 2024
+* **Certificate**, メディカル・ヘルスケアデバイス　スタートアップ経営者育成プログラム (TRACS), Sep 2023 - Jun 2024
   * Collaborated with engineering faculty on photonics medical device development
   * Delivered final presentation at entrepreneurship symposium (300+ participants)
 

@@ -58,7 +58,7 @@ This integrative approach allows me to tackle neurodegenerative diseases from mu
 
 ## Beyond Research
 
-I am passionate about translating scientific discoveries into practical medical applications. As a teaching assistant for the Training Program for Medical/Healthcare Device Startup CEOs, I help bridge the gap between research and innovation. My involvement in the Medical Device Design course earned our team recognition for both intellectual property management and business risk management.
+I am passionate about translating scientific discoveries into practical medical applications. As a teaching assistant for the メディカル・ヘルスケアデバイス　スタートアップ経営者育成プログラム (Training program for medical/healthcare device startup CEOs: "TRACS"), I help bridge the gap between research and innovation. My involvement in the Medical Device Design course earned our team recognition for both intellectual property management and business risk management.
 
 I also contribute to evidence-based medicine as a member of the Chronic Lung Disease evidence updating group for the Japan Society for Neonatal Health and Development, where I help establish clinical recommendations based on systematic literature review.
 
