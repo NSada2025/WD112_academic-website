@@ -28,7 +28,36 @@ layout: compress
       </footer>
     </div>
 
+    <!-- Dark mode toggle button -->
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode" onclick="toggleDarkMode()">
+      <i class="fas fa-moon" id="dark-mode-icon"></i>
+    </button>
+
     {% include scripts.html %}
+
+    <!-- Dark mode script -->
+    <script>
+      // Check for saved theme preference or default to 'light' mode
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      
+      // Update icon based on current theme
+      if (currentTheme === 'dark') {
+        document.getElementById('dark-mode-icon').className = 'fas fa-sun';
+      }
+      
+      function toggleDarkMode() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Update icon
+        const icon = document.getElementById('dark-mode-icon');
+        icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      }
+    </script>
 
   </body>
 </html>
