@@ -2,55 +2,53 @@
    CUSTOM STYLES
    ========================================================================== */
 
-/* CSS Variables for consistent design */
-:root {
-  /* Colors */
-  --primary-color: #0066cc;
-  --primary-color-light: #3385d6;
-  --primary-color-dark: #0052a3;
-  
-  /* Text colors */
-  --text-color-primary: #333333;
-  --text-color-secondary: #666666;
-  --text-color-light: #999999;
-  
-  /* Background colors */
-  --bg-color-primary: #ffffff;
-  --bg-color-secondary: #f5f5f5;
-  --bg-color-accent: #fafafa;
-  
-  /* Border colors */
-  --border-color-primary: #e0e0e0;
-  --border-color-light: #f0f0f0;
-  
-  /* Spacing (8px base) */
-  --space-xs: 0.5rem;   /* 8px */
-  --space-sm: 1rem;     /* 16px */
-  --space-md: 1.5rem;   /* 24px */
-  --space-lg: 2rem;     /* 32px */
-  --space-xl: 3rem;     /* 48px */
-  
-  /* Font sizes */
-  --font-size-sm: 0.875rem;  /* 14px */
-  --font-size-base: 1rem;    /* 16px */
-  --font-size-lg: 1.125rem;  /* 18px */
-  --font-size-xl: 1.25rem;   /* 20px */
-  --font-size-2xl: 1.5rem;   /* 24px */
-  --font-size-3xl: 1.875rem; /* 30px */
-  
-  /* Line heights */
-  --line-height-tight: 1.3;
-  --line-height-base: 1.6;
-  --line-height-relaxed: 1.8;
-  
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 300ms ease;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-}
+/* SCSS Variables for consistent design */
+/* Colors */
+$primary-color: #0066cc;
+$primary-color-light: #3385d6;
+$primary-color-dark: #0052a3;
+
+/* Text colors */
+$text-color-primary: #333333;
+$text-color-secondary: #666666;
+$text-color-light: #999999;
+
+/* Background colors */
+$bg-color-primary: #ffffff;
+$bg-color-secondary: #f5f5f5;
+$bg-color-accent: #fafafa;
+
+/* Border colors */
+$border-color-primary: #e0e0e0;
+$border-color-light: #f0f0f0;
+
+/* Spacing (8px base) */
+$space-xs: 0.5rem;   /* 8px */
+$space-sm: 1rem;     /* 16px */
+$space-md: 1.5rem;   /* 24px */
+$space-lg: 2rem;     /* 32px */
+$space-xl: 3rem;     /* 48px */
+
+/* Font sizes */
+$font-size-sm: 0.875rem;  /* 14px */
+$font-size-base: 1rem;    /* 16px */
+$font-size-lg: 1.125rem;  /* 18px */
+$font-size-xl: 1.25rem;   /* 20px */
+$font-size-2xl: 1.5rem;   /* 24px */
+$font-size-3xl: 1.875rem; /* 30px */
+
+/* Line heights */
+$line-height-tight: 1.3;
+$line-height-base: 1.6;
+$line-height-relaxed: 1.8;
+
+/* Transitions */
+$transition-fast: 150ms ease;
+$transition-base: 300ms ease;
+
+/* Shadows */
+$shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+$shadow-md: 0 4px 6px rgba(0,0,0,0.1);
 
 /* Author profile image size adjustment */
 .author__avatar {
@@ -71,7 +69,7 @@
 
     @include breakpoint($large) {
       padding: 5px;
-      border: 1px solid var(--global-border-color);
+      border: 1px solid $global-border-color;
     }
   }
 }
@@ -85,39 +83,39 @@
 
 /* Navigation bar improvements */
 .masthead {
-  background: var(--bg-color-primary);
-  border-bottom: 1px solid var(--border-color-primary);
+  background: $bg-color-primary;
+  border-bottom: 1px solid $border-color-primary;
   
   &__inner-wrap {
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    padding: var(--space-sm);
+    padding: $space-sm;
     max-width: 100%;
     display: flex;
     justify-content: space-between;
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
     
     @include breakpoint($large) {
-      padding: var(--space-sm) var(--space-lg);
+      padding: $space-sm $space-lg;
     }
   }
 }
 
 /* Improve navigation visibility */
 .greedy-nav {
-  background-color: var(--bg-color-primary);
+  background-color: $bg-color-primary;
   
   a {
-    color: var(--text-color-primary);
+    color: $text-color-primary;
     font-weight: 500;
-    font-size: var(--font-size-base);
-    padding: var(--space-sm) var(--space-md);
-    transition: all var(--transition-base);
+    font-size: $font-size-base;
+    padding: $space-sm $space-md;
+    transition: all $transition-base;
     position: relative;
     
     &:hover {
-      color: var(--primary-color);
+      color: $primary-color;
       text-decoration: none;
     }
   }
@@ -127,13 +125,13 @@
       &:after {
         content: "";
         position: absolute;
-        left: var(--space-md);
-        right: var(--space-md);
+        left: $space-md;
+        right: $space-md;
         bottom: 0;
         height: 2px;
-        background: var(--primary-color);
+        background: $primary-color;
         transform: scaleX(0);
-        transition: transform var(--transition-base);
+        transition: transform $transition-base;
       }
       
       &:hover:after {
@@ -176,95 +174,102 @@
 
 /* Typography improvements */
 body {
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  color: var(--text-color-primary);
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color-primary;
+  background-color: $bg-color-primary;
+}
+
+/* Debug: Add visible change to confirm styles are loading */
+.site-title {
+  color: $primary-color !important;
+  font-weight: 600 !important;
 }
 
 /* Improve readability */
 .page__content {
   /* Heading styles */
   h1, h2, h3, h4, h5, h6 {
-    margin-top: var(--space-lg);
-    margin-bottom: var(--space-md);
-    line-height: var(--line-height-tight);
-    color: var(--text-color-primary);
+    margin-top: $space-lg;
+    margin-bottom: $space-md;
+    line-height: $line-height-tight;
+    color: $text-color-primary;
   }
   
   h1 {
-    font-size: var(--font-size-3xl);
+    font-size: $font-size-3xl;
   }
   
   h2 {
-    font-size: var(--font-size-2xl);
-    padding-bottom: var(--space-xs);
-    border-bottom: 1px solid var(--border-color-primary);
+    font-size: $font-size-2xl;
+    padding-bottom: $space-xs;
+    border-bottom: 1px solid $border-color-primary;
   }
   
   h3 {
-    font-size: var(--font-size-xl);
+    font-size: $font-size-xl;
   }
   
   /* Paragraph styles */
   p {
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-relaxed);
-    margin-bottom: var(--space-md);
+    font-size: $font-size-base;
+    line-height: $line-height-relaxed;
+    margin-bottom: $space-md;
   }
   
   /* List styles */
   ul, ol {
-    margin-bottom: var(--space-md);
+    margin-bottom: $space-md;
     
     li {
-      margin-bottom: var(--space-xs);
+      margin-bottom: $space-xs;
     }
   }
   
   /* Link styles */
   a {
-    color: var(--primary-color);
-    transition: color var(--transition-fast);
+    color: $primary-color;
+    transition: color $transition-fast;
     
     &:hover {
-      color: var(--primary-color-dark);
+      color: $primary-color-dark;
     }
   }
 }
 
 /* Card-style components for better visual hierarchy */
 .archive__item {
-  background: var(--bg-color-primary);
-  border: 1px solid var(--border-color-light);
+  background: $bg-color-primary;
+  border: 1px solid $border-color-light;
   border-radius: 8px;
-  padding: var(--space-md);
-  margin-bottom: var(--space-md);
-  transition: all var(--transition-base);
+  padding: $space-md;
+  margin-bottom: $space-md;
+  transition: all $transition-base;
   
   &:hover {
-    box-shadow: var(--shadow-md);
+    box-shadow: $shadow-md;
     transform: translateY(-2px);
   }
   
   .archive__item-title {
-    font-size: var(--font-size-xl);
+    font-size: $font-size-xl;
     margin-top: 0;
-    margin-bottom: var(--space-sm);
+    margin-bottom: $space-sm;
     
     a {
       text-decoration: none;
-      color: var(--text-color-primary);
+      color: $text-color-primary;
       
       &:hover {
-        color: var(--primary-color);
+        color: $primary-color;
       }
     }
   }
   
   .archive__item-excerpt {
-    color: var(--text-color-secondary);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    color: $text-color-secondary;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
   }
 }
 
@@ -272,68 +277,68 @@ body {
 .publication-item,
 .talk-item {
   .archive__item-teaser {
-    margin-bottom: var(--space-sm);
+    margin-bottom: $space-sm;
   }
   
   .publication-authors,
   .talk-metadata {
-    color: var(--text-color-secondary);
-    font-size: var(--font-size-sm);
-    margin-bottom: var(--space-xs);
+    color: $text-color-secondary;
+    font-size: $font-size-sm;
+    margin-bottom: $space-xs;
   }
   
   .publication-venue,
   .talk-venue {
-    color: var(--text-color-light);
+    color: $text-color-light;
     font-style: italic;
-    font-size: var(--font-size-sm);
+    font-size: $font-size-sm;
   }
 }
 
 /* Utility classes */
-.text-primary { color: var(--text-color-primary); }
-.text-secondary { color: var(--text-color-secondary); }
-.text-light { color: var(--text-color-light); }
+.text-primary { color: $text-color-primary; }
+.text-secondary { color: $text-color-secondary; }
+.text-light { color: $text-color-light; }
 
-.bg-primary { background-color: var(--bg-color-primary); }
-.bg-secondary { background-color: var(--bg-color-secondary); }
-.bg-accent { background-color: var(--bg-color-accent); }
+.bg-primary { background-color: $bg-color-primary; }
+.bg-secondary { background-color: $bg-color-secondary; }
+.bg-accent { background-color: $bg-color-accent; }
 
-.mt-sm { margin-top: var(--space-sm); }
-.mt-md { margin-top: var(--space-md); }
-.mt-lg { margin-top: var(--space-lg); }
-.mb-sm { margin-bottom: var(--space-sm); }
-.mb-md { margin-bottom: var(--space-md); }
-.mb-lg { margin-bottom: var(--space-lg); }
+.mt-sm { margin-top: $space-sm; }
+.mt-md { margin-top: $space-md; }
+.mt-lg { margin-top: $space-lg; }
+.mb-sm { margin-bottom: $space-sm; }
+.mb-md { margin-bottom: $space-md; }
+.mb-lg { margin-bottom: $space-lg; }
 
 /* Footer improvements */
 .page__footer {
-  background: var(--bg-color-secondary);
-  border-top: 1px solid var(--border-color-primary);
-  margin-top: var(--space-xl);
+  background: $bg-color-secondary;
+  border-top: 1px solid $border-color-primary;
+  margin-top: $space-xl;
   
   footer {
-    padding: var(--space-lg) 0;
-    color: var(--text-color-secondary);
-    font-size: var(--font-size-sm);
+    padding: $space-lg 0;
+    color: $text-color-secondary;
+    font-size: $font-size-sm;
     
     @include breakpoint($large) {
-      padding: var(--space-xl) 0;
+      padding: $space-xl 0;
     }
   }
   
   a {
-    color: var(--text-color-primary);
+    color: $text-color-primary;
     
     &:hover {
-      color: var(--primary-color);
+      color: $primary-color;
     }
   }
 }
 
 /* Improve page spacing */
 .page {
-  padding-bottom: var(--space-xl);
+  padding-bottom: $space-xl;
 }
 
 /* Fix archive grid layout */
@@ -341,7 +346,7 @@ body {
   .grid__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--space-md);
+    gap: $space-md;
     
     @include breakpoint($medium) {
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
