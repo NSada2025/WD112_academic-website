@@ -2,6 +2,9 @@
    CUSTOM STYLES - Simplified for GitHub Pages compatibility
    ========================================================================== */
 
+/* Import minimal styles to override defaults */
+@import "minimal-styles";
+
 /* Color palette system inspired by shadcn/ui */
 :root {
   /* Default color palette - Blue */
