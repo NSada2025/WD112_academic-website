@@ -25,6 +25,10 @@ markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 highlighter: rouge
 
+# Read more link
+read_more: "enabled"
+excerpt_separator: "<!--more-->"
+
 include:
   - _pages
 exclude:
