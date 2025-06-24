@@ -20,6 +20,7 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=PwHtFqYAAAAJ&hl=ja"
   researchmap      : "https://researchmap.jp/NSada_Myportal"
   twitter          : "n____sally"
+  note             : "https://note.com/n____sally"
 
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
