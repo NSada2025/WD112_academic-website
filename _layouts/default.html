@@ -73,16 +73,24 @@ layout: compress
 
     <!-- Theme management script -->
     <script>
+      console.log('Script starting...');
+      
       // Check for saved preferences
       const currentTheme = localStorage.getItem('theme') || 'light';
       const currentColor = localStorage.getItem('color') || 'default';
+      
+      console.log('Current theme:', currentTheme);
+      console.log('Current color:', currentColor);
       
       document.documentElement.setAttribute('data-theme', currentTheme);
       document.documentElement.setAttribute('data-color', currentColor);
       
       // Update icon based on current theme
       if (currentTheme === 'dark') {
-        document.getElementById('dark-mode-icon').className = 'fas fa-sun';
+        const icon = document.getElementById('dark-mode-icon');
+        if (icon) {
+          icon.className = 'fas fa-sun';
+        }
       }
       
       // Wait for DOM to be ready
@@ -173,6 +181,46 @@ layout: compress
           }
         });
       });
+      
+      // Alternative method - define functions globally
+      window.toggleDarkMode = function() {
+        console.log('toggleDarkMode called');
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        const icon = document.getElementById('dark-mode-icon');
+        if (icon) {
+          icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+      };
+      
+      window.toggleColorPicker = function() {
+        console.log('toggleColorPicker called');
+        const panel = document.getElementById('colorPickerPanel');
+        if (panel) {
+          panel.classList.toggle('show');
+        }
+      };
+      
+      // Try setting up listeners after a delay
+      setTimeout(function() {
+        console.log('Setting up listeners after delay...');
+        const darkBtn = document.getElementById('darkModeToggle');
+        const colorBtn = document.getElementById('colorPickerToggle');
+        
+        if (darkBtn) {
+          console.log('Found dark mode button, adding listener');
+          darkBtn.onclick = window.toggleDarkMode;
+        }
+        
+        if (colorBtn) {
+          console.log('Found color picker button, adding listener');
+          colorBtn.onclick = window.toggleColorPicker;
+        }
+      }, 1000);
     </script>
 
   </body>
