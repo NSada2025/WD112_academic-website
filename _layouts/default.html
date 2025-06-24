@@ -28,23 +28,70 @@ layout: compress
       </footer>
     </div>
 
-    <!-- Dark mode toggle button -->
-    <button class="dark-mode-toggle" aria-label="Toggle dark mode" onclick="toggleDarkMode()">
-      <i class="fas fa-moon" id="dark-mode-icon"></i>
-    </button>
+    <!-- Theme controls -->
+    <div class="theme-controls">
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode" onclick="toggleDarkMode()">
+        <i class="fas fa-moon" id="dark-mode-icon"></i>
+      </button>
+      <button class="color-picker-toggle" aria-label="Change color theme" onclick="toggleColorPicker()">
+        <i class="fas fa-palette"></i>
+      </button>
+    </div>
+    
+    <!-- Color picker panel -->
+    <div class="color-picker-panel" id="colorPickerPanel">
+      <h3>Choose Theme Color</h3>
+      <div class="color-options">
+        <button class="color-option blue" data-color="default" aria-label="Blue theme">
+          <span class="color-preview"></span>
+          <span class="color-name">Blue</span>
+        </button>
+        <button class="color-option zinc" data-color="zinc" aria-label="Zinc theme">
+          <span class="color-preview"></span>
+          <span class="color-name">Zinc</span>
+        </button>
+        <button class="color-option rose" data-color="rose" aria-label="Rose theme">
+          <span class="color-preview"></span>
+          <span class="color-name">Rose</span>
+        </button>
+        <button class="color-option green" data-color="green" aria-label="Green theme">
+          <span class="color-preview"></span>
+          <span class="color-name">Green</span>
+        </button>
+        <button class="color-option violet" data-color="violet" aria-label="Violet theme">
+          <span class="color-preview"></span>
+          <span class="color-name">Violet</span>
+        </button>
+        <button class="color-option orange" data-color="orange" aria-label="Orange theme">
+          <span class="color-preview"></span>
+          <span class="color-name">Orange</span>
+        </button>
+      </div>
+    </div>
 
     {% include scripts.html %}
 
-    <!-- Dark mode script -->
+    <!-- Theme management script -->
     <script>
-      // Check for saved theme preference or default to 'light' mode
+      // Check for saved preferences
       const currentTheme = localStorage.getItem('theme') || 'light';
+      const currentColor = localStorage.getItem('color') || 'default';
+      
       document.documentElement.setAttribute('data-theme', currentTheme);
+      document.documentElement.setAttribute('data-color', currentColor);
       
       // Update icon based on current theme
       if (currentTheme === 'dark') {
         document.getElementById('dark-mode-icon').className = 'fas fa-sun';
       }
+      
+      // Mark active color
+      document.addEventListener('DOMContentLoaded', function() {
+        const activeColor = document.querySelector(`[data-color="${currentColor}"]`);
+        if (activeColor) {
+          activeColor.classList.add('active');
+        }
+      });
       
       function toggleDarkMode() {
         const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -57,6 +104,45 @@ layout: compress
         const icon = document.getElementById('dark-mode-icon');
         icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
       }
+      
+      function toggleColorPicker() {
+        const panel = document.getElementById('colorPickerPanel');
+        panel.classList.toggle('show');
+      }
+      
+      // Handle color selection
+      document.querySelectorAll('.color-option').forEach(button => {
+        button.addEventListener('click', function() {
+          const color = this.getAttribute('data-color');
+          
+          // Remove active class from all buttons
+          document.querySelectorAll('.color-option').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          // Apply color
+          document.documentElement.setAttribute('data-color', color);
+          localStorage.setItem('color', color);
+          
+          // Close panel after selection
+          setTimeout(() => {
+            document.getElementById('colorPickerPanel').classList.remove('show');
+          }, 200);
+        });
+      });
+      
+      // Close color picker when clicking outside
+      document.addEventListener('click', function(event) {
+        const panel = document.getElementById('colorPickerPanel');
+        const colorButton = document.querySelector('.color-picker-toggle');
+        
+        if (!panel.contains(event.target) && !colorButton.contains(event.target)) {
+          panel.classList.remove('show');
+        }
+      });
     </script>
 
   </body>
