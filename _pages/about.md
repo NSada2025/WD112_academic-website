@@ -8,7 +8,19 @@ redirect_from:
 excerpt: "Naoki Sada is a neuroscience PhD student at Osaka University studying neurodegeneration, protein aggregation, and active inference. JSPS Research Fellow DC1."
 ---
 
-# About Me
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">Naoki Sada, M.D.</h1>
+    <p class="hero-subtitle">Neuroscience PhD Student | JSPS Research Fellow (DC1)</p>
+    <p class="hero-description">Investigating protein aggregation mechanisms in neurodegenerative diseases at Osaka University</p>
+    <div class="hero-buttons">
+      <a href="#research-focus" class="btn btn-primary">Research</a>
+      <a href="/academic-website/cv/" class="btn btn-secondary">View CV</a>
+    </div>
+  </div>
+</div>
+
+## About Me
 
 I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neuroscience at Osaka University Graduate School of Medicine. Currently, I am conducting research in the Yamashita laboratory, where I study the molecular mechanisms underlying neurodegenerative diseases and higher brain functions through the lens of active inference theory.
 
@@ -46,7 +58,7 @@ I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neu
 
 ## Research Evolution: From Molecules to Mind
 
-## Current Research Focus
+## Current Research Focus {#research-focus}
 
 My research has evolved from molecular mechanisms to systems-level understanding:
 
