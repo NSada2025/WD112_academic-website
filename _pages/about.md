@@ -14,32 +14,6 @@ I am Naoki Sada, M.D., a 3rd year PhD student in the Department of Molecular Neu
 
 ## 📍 Research Timeline & Evolution
 
-<!-- Mermaid diagram temporarily disabled for GitHub Pages
-<div class="mermaid">
-gantt
-    title Research Journey Timeline
-    dateFormat  YYYY
-    axisFormat  %Y
-    
-    section Medical School
-    HDAC Research           :done, hdac, 2015, 2021
-    Liverpool Internship    :done, liverpool, 2019, 2020
-    
-    section Clinical Training  
-    Osaka Univ Hospital     :done, ouh, 2021, 2022
-    Toneyama Hospital       :done, tnh, 2022, 2023
-    
-    section PhD Research
-    MSA Research            :active, msa, 2023, 2025
-    Huntington's Disease    :active, hd, 2023, 2025
-    JSPS DC1 Fellowship     :active, jsps, 2024, 2027
-    
-    section New Chapter
-    Toneyama Clinical       :crit, tc, 2025, 2027
-    Active Inference        :crit, ai, 2025, 2027
-</div>
--->
-
 ### 🎓 **2015-2021: Medical School & Foundation Research**
 **Osaka University Faculty of Medicine**
 - **Research Focus**: Histone deacetylase (HDAC) in neuronal rewiring after traumatic brain injury
@@ -71,34 +45,6 @@ gantt
   - Exploring consciousness and cognitive functions through predictive processing
 
 ## Research Evolution: From Molecules to Mind
-
-<!-- Mermaid diagram temporarily disabled for GitHub Pages
-<div class="mermaid">
-graph LR
-    A[2015-2021<br/>HDAC Research] -->|Clinical Training| B[2021-2023<br/>Patient Experience]
-    B -->|PhD Start| C[2023-2024<br/>MSA Research]
-    C -->|Paradigm Shift| D[2025-<br/>Active Inference]
-    
-    A -->|Foundation| E[Molecular Biology<br/>Protein Function]
-    B -->|Insight| F[Clinical Needs<br/>Disease Mechanisms]
-    C -->|Discovery| G[Protein Aggregation<br/>Lipid Metabolism]
-    D -->|Integration| H[Systems Neuroscience<br/>Consciousness]
-    
-    E --> I[Cell Death & Disease<br/>Publication]
-    F --> J[Neurodegenerative<br/>Disease Focus]
-    G --> K[JSPS DC1<br/>Fellowship]
-    H --> L[Dual-Track<br/>Approach]
-    
-    style A fill:#e1f5fe
-    style B fill:#b3e5fc
-    style C fill:#81d4fa
-    style D fill:#4fc3f7
-    style E fill:#fff3e0
-    style F fill:#ffe0b2
-    style G fill:#ffcc80
-    style H fill:#ffb74d
-</div>
--->
 
 ## Current Research Focus
 
