@@ -53,5 +53,5 @@ plugins:
   - jekyll-sitemap
   - jekyll-remote-theme
   - jekyll-include-cache
-  - jekyll-redirect-from
-  - jemoji
+  #- jekyll-redirect-from
+  #- jemoji
