@@ -75,9 +75,34 @@ layout: compress
     <script>
       console.log('Script starting...');
       
+      // Define functions immediately
+      window.toggleDarkMode = function() {
+        console.log('toggleDarkMode called');
+        var currentTheme = document.documentElement.getAttribute('data-theme');
+        var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        var icon = document.getElementById('dark-mode-icon');
+        if (icon) {
+          icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+      };
+      
+      window.toggleColorPicker = function() {
+        console.log('toggleColorPicker called');
+        var panel = document.getElementById('colorPickerPanel');
+        if (panel) {
+          panel.classList.toggle('show');
+        }
+      };
+      
+      console.log('Functions defined');
+      
       // Check for saved preferences
-      const currentTheme = localStorage.getItem('theme') || 'light';
-      const currentColor = localStorage.getItem('color') || 'default';
+      var currentTheme = localStorage.getItem('theme') || 'light';
+      var currentColor = localStorage.getItem('color') || 'default';
       
       console.log('Current theme:', currentTheme);
       console.log('Current color:', currentColor);
@@ -87,73 +112,34 @@ layout: compress
       
       // Update icon based on current theme
       if (currentTheme === 'dark') {
-        const icon = document.getElementById('dark-mode-icon');
+        var icon = document.getElementById('dark-mode-icon');
         if (icon) {
           icon.className = 'fas fa-sun';
         }
       }
       
-      // Setup function to be called when ready
-      function setupThemeControls() {
-        console.log('Setting up theme controls...');
+      // Set up color options when DOM is ready
+      window.addEventListener('load', function() {
+        console.log('Window loaded, setting up color options');
         
         // Mark active color
-        const activeColor = document.querySelector(`[data-color="${currentColor}"]`);
+        var activeColorSelector = '[data-color="' + currentColor + '"]';
+        var activeColor = document.querySelector(activeColorSelector);
         if (activeColor) {
           activeColor.classList.add('active');
         }
         
-        // Set up dark mode toggle
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        console.log('Dark mode toggle element:', darkModeToggle);
-        
-        if (darkModeToggle) {
-          darkModeToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Dark mode button clicked');
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            // Update icon
-            const icon = document.getElementById('dark-mode-icon');
-            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-          });
-        } else {
-          console.error('Dark mode toggle button not found!');
-        }
-        
-        // Set up color picker toggle
-        const colorPickerToggle = document.getElementById('colorPickerToggle');
-        console.log('Color picker toggle element:', colorPickerToggle);
-        
-        if (colorPickerToggle) {
-          colorPickerToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Color picker button clicked');
-            const panel = document.getElementById('colorPickerPanel');
-            if (panel) {
-              panel.classList.toggle('show');
-              console.log('Color picker toggled:', panel.classList.contains('show'));
-            } else {
-              console.error('Color picker panel not found');
-            }
-          });
-        } else {
-          console.error('Color picker toggle button not found!');
-        }
-        
         // Handle color selection
-        document.querySelectorAll('.color-option').forEach(button => {
+        var colorOptions = document.querySelectorAll('.color-option');
+        console.log('Found color options:', colorOptions.length);
+        
+        colorOptions.forEach(function(button) {
           button.addEventListener('click', function() {
-            const color = this.getAttribute('data-color');
+            var color = this.getAttribute('data-color');
+            console.log('Color selected:', color);
             
             // Remove active class from all buttons
-            document.querySelectorAll('.color-option').forEach(btn => {
+            colorOptions.forEach(function(btn) {
               btn.classList.remove('active');
             });
             
@@ -165,76 +151,17 @@ layout: compress
             localStorage.setItem('color', color);
             
             // Close panel after selection
-            setTimeout(() => {
-              document.getElementById('colorPickerPanel').classList.remove('show');
+            setTimeout(function() {
+              var panel = document.getElementById('colorPickerPanel');
+              if (panel) {
+                panel.classList.remove('show');
+              }
             }, 200);
           });
         });
-        
-        // Close color picker when clicking outside
-        document.addEventListener('click', function(event) {
-          const panel = document.getElementById('colorPickerPanel');
-          const colorButton = document.getElementById('colorPickerToggle');
-          
-          if (panel && colorButton && !panel.contains(event.target) && !colorButton.contains(event.target)) {
-            panel.classList.remove('show');
-          }
-        });
-      }
-      
-      // Try multiple ways to ensure setup runs
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', setupThemeControls);
-      } else {
-        // DOM is already loaded
-        setupThemeControls();
-      }
-      
-      // Also try on window load as backup
-      window.addEventListener('load', function() {
-        console.log('Window loaded, trying setup again...');
-        setupThemeControls();
       });
       
-      // Alternative method - define functions globally
-      window.toggleDarkMode = function() {
-        console.log('toggleDarkMode called');
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        
-        const icon = document.getElementById('dark-mode-icon');
-        if (icon) {
-          icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-        }
-      };
-      
-      window.toggleColorPicker = function() {
-        console.log('toggleColorPicker called');
-        const panel = document.getElementById('colorPickerPanel');
-        if (panel) {
-          panel.classList.toggle('show');
-        }
-      };
-      
-      // Try setting up listeners after a delay
-      setTimeout(function() {
-        console.log('Setting up listeners after delay...');
-        const darkBtn = document.getElementById('darkModeToggle');
-        const colorBtn = document.getElementById('colorPickerToggle');
-        
-        if (darkBtn) {
-          console.log('Found dark mode button, adding listener');
-          darkBtn.onclick = window.toggleDarkMode;
-        }
-        
-        if (colorBtn) {
-          console.log('Found color picker button, adding listener');
-          colorBtn.onclick = window.toggleColorPicker;
-        }
-      }, 1000);
+      console.log('Script completed');
     </script>
 
   </body>
