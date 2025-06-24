@@ -6,7 +6,7 @@ repository               : "NSada2025/academic-website"
 
 locale                   : "en-US"
 remote_theme             : "academicpages/academicpages.github.io"
-theme                    : "minimal-mistakes-jekyll"
+# theme                    : "minimal-mistakes-jekyll"  # Comment out for GitHub Pages
 
 # Navigation is configured in _data/navigation.yml
 
