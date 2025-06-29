@@ -1,0 +1,45 @@
+/* ==========================================================================
+   CSS VARIABLES FIX
+   ========================================================================== */
+
+/* Map old variable names to new ones for compatibility */
+:root {
+  /* Map global variables to standard ones */
+  --global-base-color: var(--primary-600);
+  --global-text-color: var(--text-color);
+  --global-text-color-light: var(--text-light);
+  --global-bg-color: var(--bg-color);
+  --global-border-color: var(--border-color);
+  --global-link-color: var(--link-color);
+  --global-link-color-hover: var(--link-hover);
+  --global-masthead-link-color: var(--text-color);
+  --global-masthead-link-color-hover: var(--link-color);
+}
+
+/* Dark mode mappings */
+[data-theme="dark"] {
+  --global-base-color: var(--primary-400);
+  --global-text-color: var(--text-color);
+  --global-text-color-light: var(--text-light);
+  --global-bg-color: var(--bg-color);
+  --global-border-color: var(--border-color);
+  --global-link-color: var(--link-color);
+  --global-link-color-hover: var(--link-hover);
+  --global-masthead-link-color: var(--text-color);
+  --global-masthead-link-color-hover: var(--link-color);
+}
+
+/* Additional mappings for theme colors */
+:root {
+  /* Standard variables that might be missing */
+  --bg: var(--bg-color);
+  --text: var(--text-color);
+  --border: var(--border-color);
+  --primary: var(--primary-600);
+  --primary-light: var(--primary-100);
+  --bg-secondary: var(--card-bg);
+  
+  /* Fix specific variables used in the site */
+  --page-bg: var(--bg-color);
+  --content-bg: var(--card-bg);
+}
