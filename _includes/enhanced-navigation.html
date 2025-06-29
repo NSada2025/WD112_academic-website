@@ -1,0 +1,402 @@
+<!-- Enhanced Academic Navigation System -->
+
+<!-- Reading Progress Indicator -->
+<div class="reading-progress">
+  <div class="progress-bar" id="reading-progress-bar"></div>
+</div>
+
+<!-- Quick Actions Panel -->
+<div class="quick-actions">
+  <button class="quick-action-toggle" aria-label="Quick actions" title="Quick actions">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="1"></circle>
+      <circle cx="12" cy="5" r="1"></circle>
+      <circle cx="12" cy="19" r="1"></circle>
+    </svg>
+  </button>
+  
+  <div class="quick-actions-panel" aria-hidden="true">
+    <div class="quick-actions-header">Quick Actions</div>
+    
+    <div class="quick-actions-grid">
+      <!-- Share Actions -->
+      <button class="quick-action" data-action="share-twitter" title="Share on Twitter">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+        </svg>
+        <span>Twitter</span>
+      </button>
+      
+      <button class="quick-action" data-action="share-linkedin" title="Share on LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+        <span>LinkedIn</span>
+      </button>
+      
+      <button class="quick-action" data-action="share-email" title="Share via Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <span>Email</span>
+      </button>
+      
+      <button class="quick-action" data-action="copy-url" title="Copy URL">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+        </svg>
+        <span>Copy URL</span>
+      </button>
+      
+      <!-- Utility Actions -->
+      <button class="quick-action" data-action="bookmark" title="Bookmark this page">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span>Bookmark</span>
+      </button>
+      
+      <button class="quick-action" data-action="print" title="Print this page">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6,9 6,2 18,2 18,9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        <span>Print</span>
+      </button>
+      
+      <button class="quick-action" data-action="toggle-toc" title="Toggle Table of Contents">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        <span>TOC</span>
+      </button>
+      
+      <button class="quick-action" data-action="focus-mode" title="Focus Reading Mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"></path>
+        </svg>
+        <span>Focus</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Table of Contents -->
+<div class="table-of-contents" id="table-of-contents">
+  <div class="toc-header">
+    <h3>Contents</h3>
+    <button class="toc-close" aria-label="Close table of contents">×</button>
+  </div>
+  <nav class="toc-nav" aria-label="Table of contents">
+    <ol id="toc-list"></ol>
+  </nav>
+</div>
+
+<!-- Next/Previous Navigation -->
+{% assign current_url = page.url | remove: '.html' %}
+{% assign all_posts = site.posts | concat: site.publications | concat: site.talks %}
+{% assign sorted_posts = all_posts | sort: 'date' | reverse %}
+
+{% for post in sorted_posts %}
+  {% assign post_url = post.url | remove: '.html' %}
+  {% if post_url == current_url %}
+    {% assign current_index = forloop.index0 %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if current_index %}
+  {% assign prev_index = current_index | plus: 1 %}
+  {% assign next_index = current_index | minus: 1 %}
+  {% assign prev_post = sorted_posts[prev_index] %}
+  {% assign next_post = sorted_posts[next_index] %}
+  
+  <nav class="content-navigation" aria-label="Content navigation">
+    {% if prev_post %}
+      <a href="{{ prev_post.url | relative_url }}" class="nav-link nav-prev">
+        <div class="nav-direction">← Previous</div>
+        <div class="nav-title">{{ prev_post.title | truncate: 50 }}</div>
+      </a>
+    {% endif %}
+    
+    {% if next_post %}
+      <a href="{{ next_post.url | relative_url }}" class="nav-link nav-next">
+        <div class="nav-direction">Next →</div>
+        <div class="nav-title">{{ next_post.title | truncate: 50 }}</div>
+      </a>
+    {% endif %}
+  </nav>
+{% endif %}
+
+<!-- Related Content Recommendations -->
+{% if page.collection %}
+  {% assign related_posts = site[page.collection] | where_exp: "post", "post.url != page.url" | sample: 3 %}
+  
+  {% if related_posts.size > 0 %}
+    <section class="related-content" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related Content</h2>
+      <div class="related-grid">
+        {% for post in related_posts %}
+          <article class="related-item">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+            <div class="related-meta">
+              {% if post.date %}
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+              {% endif %}
+              {% if post.venue %}
+                <span class="venue">{{ post.venue }}</span>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endif %}
+
+<!-- Enhanced Navigation JavaScript -->
+<script>
+(function() {
+  'use strict';
+
+  // Initialize enhanced navigation features
+  function initEnhancedNavigation() {
+    initReadingProgress();
+    initQuickActions();
+    initTableOfContents();
+    initContentNavigation();
+  }
+
+  // Reading progress indicator
+  function initReadingProgress() {
+    const progressBar = document.getElementById('reading-progress-bar');
+    if (!progressBar) return;
+
+    function updateProgress() {
+      const winHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.pageYOffset;
+      const trackLength = docHeight - winHeight;
+      const progress = Math.floor(scrollTop / trackLength * 100);
+      
+      progressBar.style.width = progress + '%';
+    }
+
+    window.addEventListener('scroll', updateProgress);
+    updateProgress();
+  }
+
+  // Quick actions panel
+  function initQuickActions() {
+    const toggle = document.querySelector('.quick-action-toggle');
+    const panel = document.querySelector('.quick-actions-panel');
+    
+    if (!toggle || !panel) return;
+
+    let panelOpen = false;
+
+    toggle.addEventListener('click', () => {
+      panelOpen = !panelOpen;
+      panel.classList.toggle('open', panelOpen);
+      panel.setAttribute('aria-hidden', !panelOpen);
+      toggle.setAttribute('aria-expanded', panelOpen);
+    });
+
+    // Close panel when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!toggle.contains(e.target) && !panel.contains(e.target) && panelOpen) {
+        panelOpen = false;
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Handle quick actions
+    panel.addEventListener('click', (e) => {
+      const action = e.target.closest('[data-action]');
+      if (!action) return;
+
+      handleQuickAction(action.dataset.action);
+    });
+  }
+
+  // Handle quick action clicks
+  function handleQuickAction(action) {
+    const currentUrl = window.location.href;
+    const title = document.title;
+
+    switch (action) {
+      case 'share-twitter':
+        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(title)}`, '_blank');
+        break;
+      
+      case 'share-linkedin':
+        window.open(`https://linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`, '_blank');
+        break;
+      
+      case 'share-email':
+        window.location.href = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(currentUrl)}`;
+        break;
+      
+      case 'copy-url':
+        navigator.clipboard.writeText(currentUrl).then(() => {
+          showNotification('URL copied to clipboard!');
+        });
+        break;
+      
+      case 'bookmark':
+        if (window.sidebar && window.sidebar.addPanel) {
+          window.sidebar.addPanel(title, currentUrl, '');
+        } else {
+          showNotification('Use Ctrl+D (Cmd+D on Mac) to bookmark this page');
+        }
+        break;
+      
+      case 'print':
+        window.print();
+        break;
+      
+      case 'toggle-toc':
+        toggleTableOfContents();
+        break;
+      
+      case 'focus-mode':
+        toggleFocusMode();
+        break;
+    }
+  }
+
+  // Table of contents generation
+  function initTableOfContents() {
+    const toc = document.getElementById('table-of-contents');
+    const tocList = document.getElementById('toc-list');
+    const tocClose = document.querySelector('.toc-close');
+    
+    if (!toc || !tocList) return;
+
+    // Generate TOC from headings
+    const headings = document.querySelectorAll('.page__content h1, .page__content h2, .page__content h3, .page__content h4');
+    
+    if (headings.length === 0) {
+      toc.style.display = 'none';
+      return;
+    }
+
+    let tocHTML = '';
+    headings.forEach((heading, index) => {
+      const id = heading.id || `heading-${index}`;
+      if (!heading.id) heading.id = id;
+      
+      const level = parseInt(heading.tagName.substring(1));
+      const text = heading.textContent;
+      
+      tocHTML += `<li class="toc-level-${level}"><a href="#${id}">${text}</a></li>`;
+    });
+    
+    tocList.innerHTML = tocHTML;
+
+    // Handle TOC close
+    if (tocClose) {
+      tocClose.addEventListener('click', () => {
+        toc.classList.remove('visible');
+      });
+    }
+
+    // Highlight active section
+    function updateActiveTOC() {
+      const scrollPos = window.scrollY + 100;
+      let activeHeading = null;
+
+      headings.forEach(heading => {
+        if (heading.offsetTop <= scrollPos) {
+          activeHeading = heading;
+        }
+      });
+
+      tocList.querySelectorAll('a').forEach(link => {
+        link.classList.remove('active');
+      });
+
+      if (activeHeading) {
+        const activeLink = tocList.querySelector(`a[href="#${activeHeading.id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    }
+
+    window.addEventListener('scroll', updateActiveTOC);
+    updateActiveTOC();
+  }
+
+  // Toggle table of contents
+  function toggleTableOfContents() {
+    const toc = document.getElementById('table-of-contents');
+    if (toc) {
+      toc.classList.toggle('visible');
+    }
+  }
+
+  // Focus mode toggle
+  function toggleFocusMode() {
+    document.body.classList.toggle('focus-mode');
+    
+    if (document.body.classList.contains('focus-mode')) {
+      showNotification('Focus mode enabled');
+    } else {
+      showNotification('Focus mode disabled');
+    }
+  }
+
+  // Content navigation smooth scrolling
+  function initContentNavigation() {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  // Show notification
+  function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    notification.setAttribute('role', 'status');
+    notification.setAttribute('aria-live', 'polite');
+    
+    document.body.appendChild(notification);
+    
+    // Trigger animation
+    setTimeout(() => notification.classList.add('show'), 100);
+    
+    // Remove after delay
+    setTimeout(() => {
+      notification.classList.remove('show');
+      setTimeout(() => notification.remove(), 300);
+    }, 3000);
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEnhancedNavigation);
+  } else {
+    initEnhancedNavigation();
+  }
+})();
+</script>

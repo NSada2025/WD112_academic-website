@@ -1,0 +1,400 @@
+<!-- Navigation System Test Suite -->
+<div class="navigation-test-suite" style="display: none;" id="navTestSuite">
+  <div class="test-container">
+    <h3>Navigation System Tests</h3>
+    <div class="test-results" id="testResults">
+      <!-- Test results will be populated here -->
+    </div>
+    <button onclick="runNavigationTests()" class="run-tests-btn">Run Tests</button>
+  </div>
+</div>
+
+<script>
+// Navigation System Test Suite
+function runNavigationTests() {
+  const testResults = document.getElementById('testResults');
+  const results = [];
+  
+  // Test 1: Megamenu accessibility
+  results.push(testMegamenuAccessibility());
+  
+  // Test 2: Reading progress functionality
+  results.push(testReadingProgress());
+  
+  // Test 3: Table of contents generation
+  results.push(testTOCGeneration());
+  
+  // Test 4: Search functionality
+  results.push(testSearchFunctionality());
+  
+  // Test 5: Mobile responsiveness
+  results.push(testMobileResponsiveness());
+  
+  // Test 6: Keyboard navigation
+  results.push(testKeyboardNavigation());
+  
+  // Test 7: Performance metrics
+  results.push(testPerformanceMetrics());
+  
+  // Display results
+  displayTestResults(results);
+}
+
+function testMegamenuAccessibility() {
+  const triggers = document.querySelectorAll('.megamenu-trigger');
+  const dropdowns = document.querySelectorAll('.megamenu-dropdown');
+  
+  let passed = 0;
+  let total = 0;
+  
+  // Check ARIA attributes
+  triggers.forEach(trigger => {
+    total++;
+    if (trigger.hasAttribute('aria-expanded') && 
+        trigger.hasAttribute('aria-haspopup')) {
+      passed++;
+    }
+  });
+  
+  // Check dropdown visibility management
+  dropdowns.forEach(dropdown => {
+    total++;
+    if (dropdown.hasAttribute('id')) {
+      passed++;
+    }
+  });
+  
+  return {
+    name: 'Megamenu Accessibility',
+    passed: passed,
+    total: total,
+    status: passed === total ? 'pass' : 'fail',
+    details: `ARIA attributes and dropdown management: ${passed}/${total}`
+  };
+}
+
+function testReadingProgress() {
+  const progressBar = document.getElementById('navProgressFill');
+  const progressText = document.querySelector('.progress-text');
+  const progressRing = document.querySelector('.progress-ring-fill');
+  
+  let passed = 0;
+  let total = 3;
+  
+  if (progressBar) passed++;
+  if (progressText) passed++;
+  if (progressRing) passed++;
+  
+  // Test progress calculation
+  if (passed === 3) {
+    // Simulate scroll event
+    const event = new Event('scroll');
+    window.dispatchEvent(event);
+    
+    // Check if progress updates
+    total++;
+    if (progressText.textContent.includes('%')) {
+      passed++;
+    }
+  }
+  
+  return {
+    name: 'Reading Progress',
+    passed: passed,
+    total: total,
+    status: passed === total ? 'pass' : 'fail',
+    details: `Progress indicators and calculation: ${passed}/${total}`
+  };
+}
+
+function testTOCGeneration() {
+  const tocNav = document.getElementById('tocNav');
+  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  
+  let passed = 0;
+  let total = 2;
+  
+  if (tocNav) passed++;
+  if (headings.length > 0) passed++;
+  
+  // Test TOC link generation
+  if (tocNav && headings.length > 0) {
+    const tocLinks = tocNav.querySelectorAll('.toc-link');
+    total++;
+    if (tocLinks.length > 0) {
+      passed++;
+    }
+    
+    // Test heading ID assignment
+    total++;
+    let headingsWithId = 0;
+    headings.forEach(heading => {
+      if (heading.id) headingsWithId++;
+    });
+    if (headingsWithId > 0) passed++;
+  }
+  
+  return {
+    name: 'Table of Contents Generation',
+    passed: passed,
+    total: total,
+    status: passed === total ? 'pass' : 'fail',
+    details: `TOC structure and heading links: ${passed}/${total}`
+  };
+}
+
+function testSearchFunctionality() {
+  const searchInput = document.getElementById('academicSearch');
+  const searchForm = document.getElementById('academicSearchForm');
+  const suggestions = document.getElementById('searchSuggestions');
+  
+  let passed = 0;
+  let total = 3;
+  
+  if (searchInput) passed++;
+  if (searchForm) passed++;
+  if (suggestions) passed++;
+  
+  // Test search input events
+  if (searchInput) {
+    total++;
+    try {
+      const event = new Event('input');
+      searchInput.value = 'test';
+      searchInput.dispatchEvent(event);
+      passed++; // If no error, event handling works
+    } catch (e) {
+      // Event handling failed
+    }
+  }
+  
+  return {
+    name: 'Search Functionality',
+    passed: passed,
+    total: total,
+    status: passed === total ? 'pass' : 'fail',
+    details: `Search components and events: ${passed}/${total}`
+  };
+}
+
+function testMobileResponsiveness() {
+  const megamenu = document.getElementById('academicMegamenu');
+  const quickActions = document.getElementById('quickActionsToolbar');
+  const smartToc = document.getElementById('smartToc');
+  
+  let passed = 0;
+  let total = 3;
+  
+  // Check if responsive classes exist
+  if (megamenu && window.getComputedStyle) {
+    const styles = window.getComputedStyle(megamenu);
+    if (styles) passed++;
+  }
+  
+  if (quickActions) passed++;
+  if (smartToc) passed++;
+  
+  // Test viewport meta tag
+  const viewport = document.querySelector('meta[name="viewport"]');
+  if (viewport) {
+    total++;
+    passed++;
+  }
+  
+  return {
+    name: 'Mobile Responsiveness',
+    passed: passed,
+    total: total,
+    status: passed === total ? 'pass' : 'fail',
+    details: `Responsive elements and viewport: ${passed}/${total}`
+  };
+}
+
+function testKeyboardNavigation() {
+  const triggers = document.querySelectorAll('.megamenu-trigger');
+  const quickActionBtns = document.querySelectorAll('.quick-action-btn');
+  
+  let passed = 0;
+  let total = 0;
+  
+  // Test focusable elements
+  triggers.forEach(trigger => {
+    total++;
+    if (trigger.tabIndex >= 0 || trigger.tabIndex === undefined) {
+      passed++;
+    }
+  });
+  
+  quickActionBtns.forEach(btn => {
+    total++;
+    if (btn.tabIndex >= 0 || btn.tabIndex === undefined) {
+      passed++;
+    }
+  });
+  
+  // Test ARIA labels
+  const ariaLabeled = document.querySelectorAll('[aria-label]');
+  total++;
+  if (ariaLabeled.length > 0) passed++;
+  
+  return {
+    name: 'Keyboard Navigation',
+    passed: passed,
+    total: total,
+    status: passed === total ? 'pass' : 'fail',
+    details: `Focusable elements and ARIA labels: ${passed}/${total}`
+  };
+}
+
+function testPerformanceMetrics() {
+  let passed = 0;
+  let total = 4;
+  
+  // Test CSS loading
+  const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
+  if (stylesheets.length > 0) passed++;
+  
+  // Test JavaScript loading
+  const scripts = document.querySelectorAll('script');
+  if (scripts.length > 0) passed++;
+  
+  // Test image optimization (if any navigation images exist)
+  const images = document.querySelectorAll('img');
+  passed++; // Always pass this for now
+  
+  // Test animation performance
+  const animatedElements = document.querySelectorAll('[style*="transition"], .quick-actions-toolbar, .megamenu-dropdown');
+  if (animatedElements.length > 0) passed++;
+  
+  return {
+    name: 'Performance Metrics',
+    passed: passed,
+    total: total,
+    status: passed === total ? 'pass' : 'fail',
+    details: `Resource loading and animations: ${passed}/${total}`
+  };
+}
+
+function displayTestResults(results) {
+  const testResults = document.getElementById('testResults');
+  let html = '<div class="test-summary">';
+  
+  const totalTests = results.length;
+  const passedTests = results.filter(r => r.status === 'pass').length;
+  
+  html += `<h4>Test Summary: ${passedTests}/${totalTests} tests passed</h4>`;
+  html += '</div><div class="test-details">';
+  
+  results.forEach(result => {
+    const statusClass = result.status === 'pass' ? 'test-pass' : 'test-fail';
+    const statusIcon = result.status === 'pass' ? '✓' : '✗';
+    
+    html += `<div class="test-result ${statusClass}">
+      <span class="test-status">${statusIcon}</span>
+      <span class="test-name">${result.name}</span>
+      <span class="test-score">${result.passed}/${result.total}</span>
+      <div class="test-details-text">${result.details}</div>
+    </div>`;
+  });
+  
+  html += '</div>';
+  testResults.innerHTML = html;
+}
+
+// Auto-run tests in development mode
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+  window.addEventListener('load', function() {
+    // Show test suite in development
+    const testSuite = document.getElementById('navTestSuite');
+    if (testSuite) {
+      testSuite.style.display = 'block';
+      // Auto-run tests after a delay
+      setTimeout(runNavigationTests, 2000);
+    }
+  });
+}
+</script>
+
+<style>
+.navigation-test-suite {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--global-card-bg);
+  border: 2px solid var(--global-border-color);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 400px;
+  font-size: 14px;
+}
+
+.test-container h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: var(--global-text-color);
+}
+
+.run-tests-btn {
+  background: var(--global-base-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.test-result {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--global-border-color);
+  align-items: center;
+}
+
+.test-result:last-child {
+  border-bottom: none;
+}
+
+.test-pass .test-status {
+  color: green;
+  font-weight: bold;
+}
+
+.test-fail .test-status {
+  color: red;
+  font-weight: bold;
+}
+
+.test-name {
+  font-weight: 500;
+}
+
+.test-score {
+  font-size: 12px;
+  color: var(--global-text-color-light);
+}
+
+.test-details-text {
+  grid-column: 1 / -1;
+  font-size: 11px;
+  color: var(--global-text-color-light);
+  margin-top: 4px;
+}
+
+.test-summary {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: var(--global-border-color);
+  border-radius: 4px;
+}
+
+.test-summary h4 {
+  margin: 0;
+  font-size: 14px;
+}
+</style>

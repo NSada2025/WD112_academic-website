@@ -1,0 +1,381 @@
+{% include base_path %}
+
+<!-- Academic Mega Menu Navigation -->
+<div class="academic-megamenu" id="academicMegamenu">
+  <div class="megamenu-container">
+    <!-- Research Section -->
+    <div class="megamenu-section" data-section="research">
+      <button class="megamenu-trigger" data-target="research" aria-expanded="false" aria-haspopup="true">
+        <span>Research</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      
+      <div class="megamenu-dropdown" id="research-dropdown">
+        <div class="megamenu-content">
+          <div class="megamenu-column">
+            <h4><i class="fas fa-flask"></i> Current Work</h4>
+            <ul>
+              <li><a href="{{ base_path }}/research-timeline/">Research Timeline</a></li>
+              <li><a href="{{ base_path }}/research-statement/">Research Statement</a></li>
+              <li><a href="{{ base_path }}/influential-papers/">Influential Papers</a></li>
+            </ul>
+          </div>
+          
+          <div class="megamenu-column">
+            <h4><i class="fas fa-book-open"></i> Publications</h4>
+            <ul>
+              <li><a href="{{ base_path }}/publications/">All Publications</a></li>
+              {% assign recent_publications = site.publications | sort: 'date' | reverse | limit: 3 %}
+              {% for pub in recent_publications %}
+              <li><a href="{{ pub.url | prepend: base_path }}" class="recent-item">{{ pub.title | truncate: 40 }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          
+          <div class="megamenu-column">
+            <h4><i class="fas fa-microscope"></i> Focus Areas</h4>
+            <ul>
+              <li><a href="{{ base_path }}/research-timeline/#neurodegeneration">Neurodegeneration</a></li>
+              <li><a href="{{ base_path }}/research-timeline/#protein-aggregation">Protein Aggregation</a></li>
+              <li><a href="{{ base_path }}/research-timeline/#biomarkers">Biomarker Discovery</a></li>
+              <li><a href="{{ base_path }}/research-timeline/#machine-learning">Machine Learning in Healthcare</a></li>
+            </ul>
+          </div>
+          
+          <div class="megamenu-featured">
+            <div class="featured-card">
+              <i class="fas fa-star"></i>
+              <h5>Latest Research</h5>
+              <p>Investigating chaperone proteins in Multiple System Atrophy pathogenesis</p>
+              <a href="{{ base_path }}/research-statement/" class="featured-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Academic Profile Section -->
+    <div class="megamenu-section" data-section="profile">
+      <button class="megamenu-trigger" data-target="profile" aria-expanded="false" aria-haspopup="true">
+        <span>Profile</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      
+      <div class="megamenu-dropdown" id="profile-dropdown">
+        <div class="megamenu-content">
+          <div class="megamenu-column">
+            <h4><i class="fas fa-user-graduate"></i> About</h4>
+            <ul>
+              <li><a href="{{ base_path }}/">Biography</a></li>
+              <li><a href="{{ base_path }}/cv/">Curriculum Vitae</a></li>
+              <li><a href="{{ base_path }}/cv/#education">Education</a></li>
+              <li><a href="{{ base_path }}/cv/#awards">Awards & Recognition</a></li>
+            </ul>
+          </div>
+          
+          <div class="megamenu-column">
+            <h4><i class="fas fa-chalkboard-teacher"></i> Academic Activities</h4>
+            <ul>
+              <li><a href="{{ base_path }}/talks/">Talks & Presentations</a></li>
+              <li><a href="{{ base_path }}/teaching/">Teaching</a></li>
+              <li><a href="{{ base_path }}/cv/#service">Academic Service</a></li>
+              <li><a href="{{ base_path }}/cv/#mentoring">Mentoring</a></li>
+            </ul>
+          </div>
+          
+          <div class="megamenu-column">
+            <h4><i class="fas fa-network-wired"></i> Connections</h4>
+            <ul>
+              <li><a href="https://scholar.google.com/citations?user=PwHtFqYAAAAJ&hl=ja" target="_blank">Google Scholar</a></li>
+              <li><a href="https://researchmap.jp/NSada_Myportal" target="_blank">ResearchMap</a></li>
+              <li><a href="https://www.linkedin.com/in/snaoki-97osaka" target="_blank">LinkedIn</a></li>
+              <li><a href="mailto:naoki.s.sound.of.sil@gmail.com">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="megamenu-featured">
+            <div class="featured-card">
+              <i class="fas fa-trophy"></i>
+              <h5>JSPS Fellowship</h5>
+              <p>Research Fellowship for Young Scientists (DC1) recipient</p>
+              <a href="{{ base_path }}/cv/#fellowships" class="featured-link">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resources Section -->
+    <div class="megamenu-section" data-section="resources">
+      <button class="megamenu-trigger" data-target="resources" aria-expanded="false" aria-haspopup="true">
+        <span>Resources</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      
+      <div class="megamenu-dropdown" id="resources-dropdown">
+        <div class="megamenu-content">
+          <div class="megamenu-column">
+            <h4><i class="fas fa-file-alt"></i> Writing</h4>
+            <ul>
+              <li><a href="{{ base_path }}/year-archive/">All Posts</a></li>
+              {% assign recent_posts = site.posts | limit: 3 %}
+              {% for post in recent_posts %}
+              <li><a href="{{ post.url | prepend: base_path }}" class="recent-item">{{ post.title | truncate: 40 }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          
+          <div class="megamenu-column">
+            <h4><i class="fas fa-tools"></i> Tools & Methods</h4>
+            <ul>
+              <li><a href="{{ base_path }}/files/paper_analysis_prompt_template.md">Paper Analysis Template</a></li>
+              <li><a href="{{ base_path }}/markdown_generator/">Publication Generator</a></li>
+              <li><a href="{{ base_path }}/talkmap/">Talk Map</a></li>
+              <li><a href="{{ base_path }}/paper-graph/">Research Network</a></li>
+            </ul>
+          </div>
+          
+          <div class="megamenu-column">
+            <h4><i class="fas fa-graduation-cap"></i> For Students</h4>
+            <ul>
+              <li><a href="{{ base_path }}/learning/">Learning Resources</a></li>
+              <li><a href="{{ base_path }}/teaching/">Teaching Materials</a></li>
+              <li><a href="{{ base_path }}/cv/#mentoring">Mentorship Opportunities</a></li>
+              <li><a href="mailto:naoki.s.sound.of.sil@gmail.com?subject=Research Inquiry">Research Inquiries</a></li>
+            </ul>
+          </div>
+          
+          <div class="megamenu-featured">
+            <div class="featured-card">
+              <i class="fas fa-download"></i>
+              <h5>Quick Downloads</h5>
+              <p>CV, research summaries, and presentation materials</p>
+              <a href="{{ base_path }}/cv/" class="featured-link">Access Files</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="megamenu-search">
+      <div class="search-container">
+        <form class="search-form" id="academicSearchForm" role="search">
+          <div class="search-input-container">
+            <input type="search" 
+                   id="academicSearch" 
+                   placeholder="Search publications, posts, talks..." 
+                   aria-label="Search site content"
+                   autocomplete="off">
+            <button type="submit" class="search-submit" aria-label="Submit search">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div class="search-suggestions" id="searchSuggestions">
+            <!-- Dynamic search suggestions will appear here -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mega Menu Scripts -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  initializeAcademicMegamenu();
+});
+
+function initializeAcademicMegamenu() {
+  const megamenu = document.getElementById('academicMegamenu');
+  if (!megamenu) return;
+
+  // Initialize dropdown toggles
+  initMegamenuDropdowns();
+  
+  // Initialize academic search
+  initAcademicSearch();
+  
+  // Close dropdowns on outside click
+  document.addEventListener('click', closeMegamenuDropdowns);
+  
+  // Handle keyboard navigation
+  document.addEventListener('keydown', handleMegamenuKeyboard);
+}
+
+function initMegamenuDropdowns() {
+  const triggers = document.querySelectorAll('.megamenu-trigger');
+  
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const target = this.getAttribute('data-target');
+      const dropdown = document.getElementById(target + '-dropdown');
+      const isOpen = this.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other dropdowns
+      closeMegamenuDropdowns();
+      
+      // Toggle current dropdown
+      if (!isOpen && dropdown) {
+        this.setAttribute('aria-expanded', 'true');
+        dropdown.classList.add('visible');
+        this.classList.add('active');
+      }
+    });
+    
+    // Handle keyboard activation
+    trigger.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+}
+
+function closeMegamenuDropdowns(exceptTrigger = null) {
+  const triggers = document.querySelectorAll('.megamenu-trigger');
+  const dropdowns = document.querySelectorAll('.megamenu-dropdown');
+  
+  triggers.forEach(trigger => {
+    if (trigger !== exceptTrigger) {
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.classList.remove('active');
+    }
+  });
+  
+  dropdowns.forEach(dropdown => {
+    dropdown.classList.remove('visible');
+  });
+}
+
+function handleMegamenuKeyboard(e) {
+  if (e.key === 'Escape') {
+    closeMegamenuDropdowns();
+    
+    // Return focus to the active trigger
+    const activeTrigger = document.querySelector('.megamenu-trigger.active');
+    if (activeTrigger) {
+      activeTrigger.focus();
+    }
+  }
+}
+
+function initAcademicSearch() {
+  const searchForm = document.getElementById('academicSearchForm');
+  const searchInput = document.getElementById('academicSearch');
+  const suggestions = document.getElementById('searchSuggestions');
+  
+  if (!searchInput) return;
+  
+  // Search data (in a real implementation, this would come from a search index)
+  const searchData = [
+    { title: 'Research Timeline', url: '/research-timeline/', type: 'page' },
+    { title: 'Publications', url: '/publications/', type: 'page' },
+    { title: 'Curriculum Vitae', url: '/cv/', type: 'page' },
+    { title: 'HDAC Inhibition in TBI', url: '/publications/2020-08-20-hdac-inhibition-tbi/', type: 'publication' },
+    { title: 'Biomarker Discovery', url: '/publications/2023-08-20-biomarker-discovery/', type: 'publication' },
+    { title: 'Machine Learning in Healthcare', url: '/publications/2024-01-15-machine-learning-healthcare/', type: 'publication' }
+  ];
+  
+  let searchTimeout;
+  
+  searchInput.addEventListener('input', function(e) {
+    const query = e.target.value.trim().toLowerCase();
+    
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      if (query.length >= 2) {
+        showSearchSuggestions(query, searchData);
+      } else {
+        hideSearchSuggestions();
+      }
+    }, 200);
+  });
+  
+  searchInput.addEventListener('focus', function() {
+    if (this.value.trim().length >= 2) {
+      suggestions.classList.add('visible');
+    }
+  });
+  
+  searchInput.addEventListener('blur', function() {
+    // Delay hiding to allow clicking on suggestions
+    setTimeout(() => {
+      hideSearchSuggestions();
+    }, 200);
+  });
+  
+  searchForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    performSearch(searchInput.value.trim());
+  });
+}
+
+function showSearchSuggestions(query, searchData) {
+  const suggestions = document.getElementById('searchSuggestions');
+  if (!suggestions) return;
+  
+  const matches = searchData.filter(item => 
+    item.title.toLowerCase().includes(query) ||
+    item.type.toLowerCase().includes(query)
+  ).slice(0, 5);
+  
+  if (matches.length > 0) {
+    let html = '<ul class="suggestion-list">';
+    matches.forEach(match => {
+      html += `<li class="suggestion-item">
+        <a href="${match.url}" class="suggestion-link">
+          <span class="suggestion-icon">
+            <i class="fas fa-${getIconForType(match.type)}"></i>
+          </span>
+          <span class="suggestion-content">
+            <span class="suggestion-title">${highlightMatch(match.title, query)}</span>
+            <span class="suggestion-type">${match.type}</span>
+          </span>
+        </a>
+      </li>`;
+    });
+    html += '</ul>';
+    
+    suggestions.innerHTML = html;
+    suggestions.classList.add('visible');
+  } else {
+    suggestions.innerHTML = '<div class="no-suggestions">No results found</div>';
+    suggestions.classList.add('visible');
+  }
+}
+
+function hideSearchSuggestions() {
+  const suggestions = document.getElementById('searchSuggestions');
+  if (suggestions) {
+    suggestions.classList.remove('visible');
+  }
+}
+
+function performSearch(query) {
+  if (query) {
+    // In a real implementation, this would redirect to a search results page
+    // For now, we'll redirect to the site search
+    window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+  }
+}
+
+function getIconForType(type) {
+  const icons = {
+    'page': 'file-alt',
+    'publication': 'book',
+    'post': 'blog',
+    'talk': 'microphone-alt'
+  };
+  return icons[type] || 'file';
+}
+
+function highlightMatch(text, query) {
+  const regex = new RegExp(`(${query})`, 'gi');
+  return text.replace(regex, '<mark>$1</mark>');
+}
+</script>

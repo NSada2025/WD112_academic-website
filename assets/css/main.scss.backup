@@ -3,54 +3,45 @@
 
 /*
  * This file controls what is imported from /_sass
- * Optimized order for WD112 Academic Website
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
 
 @import 
-    // 1. Variables and configuration first
-    "variables",
-    
-    // 2. Vendor dependencies
     "vendor/breakpoint/breakpoint",
-    "vendor/susy/susy",
-    
-    // 3. Basic theme setup
+
     "themes",
-    
-    // 4. Mixins and utilities
+    "theme/{{ site.site_theme | default: 'default' }}",
+
     "include/mixins",
-    "include/utilities",
-    
-    // 5. Reset and base styles
+    "vendor/susy/susy",
+
     "layout/reset",
     "layout/base",
-    
-    // 6. Layout components
+
+    "include/utilities",
     "layout/tables",
     "layout/buttons",
     "layout/notices",
     "layout/masthead",
     "layout/navigation",
     "layout/footer",
+    "syntax",
+
     "layout/forms",
+
     "layout/page",
     "layout/archive",
     "layout/sidebar",
     
-    // 7. Other features
-    "syntax",
     "skip-links",
-    
-    // 8. Theme colors (site theme based)
-    "theme/{{ site.site_theme | default: 'default' }}",
-    
-    // 9. Custom overrides
-    "custom-overrides",
-    "seasonal-themes",
+    "variables-fix",
+    "custom-styles",
     "enhanced-navigation",
     "academic-navigation",
+    "academic-megamenu",
     
-    // 10. Vendor assets (last)
     "vendor/font-awesome/fontawesome",
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands",
