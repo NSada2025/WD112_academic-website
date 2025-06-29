@@ -8,8 +8,14 @@ main:
   - title: "Research"
     url: /research-timeline/
     
+  - title: "Research Statement"
+    url: /research-statement/
+    
   - title: "Publications"
     url: /publications/
+    
+  - title: "Influential Papers"
+    url: /influential-papers/
     
   - title: "CV"
     url: /cv/
