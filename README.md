@@ -20,6 +20,13 @@
 - **研究テーマ総括**: 主要研究テーマを論文形式（イントロ、先行研究、Gap）でまとめる
 - **ティーチングポートフォリオ**: 教育実績の詳細
 
+### プレゼンテーションスライド
+- **presentations/**: プレゼンテーション資料・スライド管理
+  - Manus AI用のMarkdown形式スライド
+  - Discord Bot Guide
+  - GitHub Actions Guide  
+  - GitHub CLI Guide
+
 ## 技術スタック
 
 - **静的サイトジェネレータ**: Jekyll 4.3.2
