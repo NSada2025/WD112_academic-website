@@ -1,11 +1,49 @@
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
+<html lang="en">
   <head>
-    {% include head.html %}
-    {% include head/custom.html %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <style>
+      /* Inline all necessary styles to avoid external CSS conflicts */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #f8f9fa;
+      }
+      
+      .mindmap-wrapper {
+        min-height: 100vh;
+        width: 100%;
+      }
+      
+      .page__hero {
+        background: #fff;
+        padding: 2rem 0;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      
+      .page__title {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #333;
+      }
+      
+      .mindmap-content {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+      }
+    </style>
   </head>
 
-  <body class="layout--mindmap">
+  <body>
     <div class="mindmap-wrapper">
       <div class="page__hero">
         <h1 class="page__title">{{ page.title }}</h1>
