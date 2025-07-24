@@ -16,13 +16,19 @@ layout: compress
     {% include skip-links.html %}
     {% include browser-upgrade.html %}
     {% include masthead.html %}
+    {% comment %}
+    <!-- Academic megamenu temporarily disabled -->
     {% include academic-megamenu.html %}
+    {% endcomment %}
 
     <main id="main" role="main">
       {{ content }}
     </main>
     
+    {% comment %}
+    <!-- Enhanced navigation temporarily disabled -->
     {% include enhanced-navigation.html %}
+    {% endcomment %}
 
     <div class="page__footer">
       <footer>
