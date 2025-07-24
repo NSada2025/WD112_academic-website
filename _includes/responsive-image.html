@@ -1,0 +1,16 @@
+{% comment %}
+  Responsive image include
+  Usage: {% include responsive-image.html path="/images/hero/hero-main.png" alt="Description" %}
+{% endcomment %}
+
+<picture>
+  {% if include.path contains '.png' %}
+    <source srcset="{{ include.path | replace: '.png', '.webp' | relative_url }}" type="image/webp">
+  {% endif %}
+  <img 
+    src="{{ include.path | relative_url }}" 
+    alt="{{ include.alt | default: 'Image' }}"
+    {% if include.class %}class="{{ include.class }}"{% endif %}
+    {% if include.loading %}loading="{{ include.loading }}"{% else %}loading="lazy"{% endif %}
+  >
+</picture>

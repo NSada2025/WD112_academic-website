@@ -1,10 +1,15 @@
 ---
 permalink: /
-title: " "
+title: "Naoki Sada"
+excerpt: "Neuroscience PhD Student exploring the intersection of brain, data, and systems"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+header:
+  overlay_image: /images/hero/hero-main.png
+  overlay_filter: 0.3
+  caption: "Research Network Visualization"
 ---
 
 <div class="minimal-hero">
