@@ -1,3 +1,6 @@
+// Debug info
+console.log("Mind network script loaded");
+
 // Research network data
 const networkData = {
   nodes: [
@@ -29,9 +32,21 @@ const categoryColors = {
   business: "#6b7280"
 };
 
-// Initialize D3 force simulation
-const width = document.getElementById('network-container').offsetWidth;
-const height = 600;
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("DOM loaded, initializing network...");
+  
+  const container = document.getElementById('network-container');
+  if (!container) {
+    console.error("Network container not found!");
+    return;
+  }
+  
+  // Initialize D3 force simulation
+  const width = container.offsetWidth || 800;
+  const height = 600;
+  
+  console.log(`Container dimensions: ${width}x${height}`);
 
 const svg = d3.select("#network-container")
   .append("svg")
@@ -129,3 +144,5 @@ const zoom = d3.zoom()
   });
 
 svg.call(zoom);
+
+}); // End of DOMContentLoaded

@@ -1,8 +1,8 @@
 title                    : "Naoki Sada | Neuroscience PhD Student"
 description              : "PhD student at Osaka University studying neurodegeneration, protein aggregation, and active inference | JSPS Research Fellow (DC1)"
 url                      : "https://NSada2025.github.io"
-baseurl                  : "/academic-website"
-repository               : "NSada2025/academic-website"
+baseurl                  : "/WD112_academic-website"
+repository               : "NSada2025/WD112_academic-website"
 
 locale                   : "en-US"
 remote_theme             : "academicpages/academicpages.github.io"
