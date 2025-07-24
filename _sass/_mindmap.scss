@@ -1,0 +1,44 @@
+// Mindmap page specific styles
+.layout--mindmap {
+  // Remove all default styles
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  // Hide ALL potential navigation elements
+  .masthead,
+  .greedy-nav,
+  .visible-links,
+  .hidden-links,
+  .nav__list,
+  .nav__item,
+  .nav__link,
+  .sidebar,
+  .sidebar__right,
+  .author__avatar,
+  .author__content,
+  .author__name,
+  .author__bio,
+  .author__urls,
+  .page__footer,
+  .page__meta,
+  .page__share,
+  .page__related,
+  .pagination,
+  .breadcrumbs,
+  .toc,
+  .toc__menu,
+  #site-nav,
+  nav,
+  header:not(.page__hero),
+  footer,
+  aside {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+}
