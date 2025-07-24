@@ -5,21 +5,18 @@
     {% include head/custom.html %}
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-    {% include masthead.html %}
-    
-    <div class="initial-content">
+  <body class="layout--mindmap">
+    <div class="mindmap-wrapper">
       <div class="page__hero">
         <h1 class="page__title">{{ page.title }}</h1>
       </div>
       
-      <div id="main" role="main">
-        <div class="mindmap-content">
-          {{ content }}
-        </div>
+      <div class="mindmap-content">
+        {{ content }}
       </div>
     </div>
 
-    {% include scripts.html %}
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="{{ '/assets/js/mind-network.js' | relative_url }}"></script>
   </body>
 </html>
