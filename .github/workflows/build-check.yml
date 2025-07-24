@@ -1,0 +1,36 @@
+name: Build Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+        bundler-cache: true
+    
+    - name: Build Jekyll site
+      run: |
+        bundle exec jekyll build
+        echo "Build completed successfully!"
+    
+    - name: Check for build errors
+      run: |
+        if [ -d "_site" ]; then
+          echo "✅ _site directory exists"
+          echo "📁 Site structure:"
+          ls -la _site/
+        else
+          echo "❌ Build failed: _site directory not found"
+          exit 1
+        fi
