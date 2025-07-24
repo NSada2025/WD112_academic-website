@@ -8,8 +8,9 @@ redirect_from:
   - /about/
   - /about.html
 header:
-  image: "images/hero/hero-main.png"
-  image_description: "Research network visualization"
+  overlay_image: "hero/hero-main.png"
+  overlay_filter: 0.3
+  caption: "Research network visualization"
 ---
 
 <style>
