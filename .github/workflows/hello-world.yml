@@ -1,0 +1,24 @@
+name: Hello World
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Say hello
+      run: echo "Hello from GitHub Actions! 👋"
+      
+    - name: Show date
+      run: date
+      
+    - name: Show runner info
+      run: |
+        echo "Runner OS: $RUNNER_OS"
+        echo "GitHub Actor: $GITHUB_ACTOR"
+        echo "Repository: $GITHUB_REPOSITORY"
