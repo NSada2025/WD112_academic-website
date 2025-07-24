@@ -8,7 +8,7 @@ redirect_from:
   - /about/
   - /about.html
 header:
-  image: /images/hero/hero-main.png
+  image: "images/hero/hero-main.png"
   image_description: "Research network visualization"
 ---
 
