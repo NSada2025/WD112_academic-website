@@ -7,9 +7,28 @@ $max-width: 1280px !default;
 $border-radius: 4px !default;
 $masthead-height: 70px !default;
 $x-large: $max-width !default;
-$warning-color: #f97316 !default; // Orange-500 for warnings
-$navicon-width: 1.5rem !default;
-$navicon-height: 0.25rem !default;
+
+// Color variables
+$gray: #7a8288 !default;
+$dark-gray: mix(#000, $gray, 40%) !default;
+$darker-gray: mix(#000, $gray, 60%) !default;
+$light-gray: mix(#fff, $gray, 50%) !default;
+$lighter-gray: mix(#fff, $gray, 90%) !default;
+
+// Semantic colors
+$danger-color: #ee5f5b !default;
+$info-color: #2f7f93 !default;
+$notice-color: #7a8288 !default;
+$success-color: #62c462 !default;
+$warning-color: #f89406 !default;
+
+// UI variables
+$box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125) !default;
+$global-transition: all 0.2s ease-in-out !default;
+$navicon-width: 28px !default;
+$navicon-height: 4px !default;
+$sidebar-link-max-width: 250px !default;
+$sidebar-screen-min-width: 1024px !default;
 
 // CSS変数の定義
 :root {
