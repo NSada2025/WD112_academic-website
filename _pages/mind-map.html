@@ -1,15 +1,28 @@
 ---
-layout: single
+layout: mindmap
 title: "My Research Network"
 permalink: /mind-map/
-author_profile: false
-classes: wide
 ---
 
 <style>
-  /* Full width container */
-  .page__content {
+  /* Mind map specific styles */
+  .mindmap-content {
+    width: 100%;
     max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .page__hero {
+    background: #f8f9fa;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .page__title {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5rem;
   }
   
   #network-container {
@@ -19,8 +32,6 @@ classes: wide
     border-radius: 8px;
     overflow: hidden;
     background-color: #ffffff;
-    position: relative;
-    z-index: 1;
   }
   
   .node {
@@ -52,52 +63,6 @@ classes: wide
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s;
-    z-index: 10;
-  }
-  
-  /* Hide any inherited background elements */
-  .page {
-    background: transparent;
-  }
-  
-  /* Ensure clean presentation */
-  .page__hero,
-  .page__hero-caption,
-  .breadcrumbs,
-  .sidebar,
-  .sidebar__right,
-  .enhanced-navigation,
-  .nav__list,
-  .author__avatar,
-  .author__content,
-  .author__urls-wrapper {
-    display: none !important;
-  }
-  
-  /* Remove padding/margin from main content */
-  #main {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    max-width: 100% !important;
-  }
-  
-  /* Full width for article */
-  article.page {
-    float: none !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  .page__inner-wrap {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  /* Center the title */
-  .page__title {
-    text-align: center;
-    margin-bottom: 2rem;
   }
 </style>
 
