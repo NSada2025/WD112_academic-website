@@ -10,7 +10,13 @@ header:
   overlay_image: "hero/hero-main.png"
   overlay_filter: 0.3
   caption: "Research Network Visualization"
+  overlay_color: "#5e616c"
 ---
+
+<!-- Debug: Check if header image is working -->
+{% if page.header.overlay_image %}
+<p style="color: red;">DEBUG: overlay_image is set to: {{ page.header.overlay_image }}</p>
+{% endif %}
 
 <div class="minimal-hero">
   <h1>Naoki Sada</h1>
