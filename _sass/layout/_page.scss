@@ -132,6 +132,11 @@
     .wrapper {
       padding-left: 1em;
       padding-right: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      min-height: 300px;
 
       @include breakpoint($x-large) {
         max-width: $x-large;
@@ -148,10 +153,14 @@
 
     .page__lead {
       max-width: $medium;
+      text-align: right;
+      margin-bottom: 0.5rem;
     }
 
     .page__title {
       font-size: $type-size-2;
+      text-align: right;
+      margin-bottom: 0.5rem;
 
       @include breakpoint($small) {
         font-size: $type-size-1;
