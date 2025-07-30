@@ -65,7 +65,7 @@ header:
 ## Selected Conference Presentations
 ------
 ### Oral Presentations
-* **Prevention of neurological complications of surgery by developing a nerve-sparing navigation system**  
+* **[Prevention of neurological complications of surgery by developing a nerve-sparing navigation system](https://link-j.g.kuroco-img.app/v=1730801790/files/topics/44108_ext_6_0.pdf)**  
   Sada N. and Kisaki T., MedTech Entrepreneurship Symposium, Osaka, Japan, Jun 2024
 
 * **Traumatic brain injury and basic research**  
