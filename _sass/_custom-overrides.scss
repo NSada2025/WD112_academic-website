@@ -320,8 +320,8 @@ body {
 /* 2. Hero section improvements */
 .minimal-hero {
   position: relative;
-  padding: 4rem 0;
-  margin: -2rem -2rem 3rem;
+  padding: 2.5rem 0;
+  margin: -2rem -2rem 2rem;
   text-align: center;
   overflow: hidden;
   
@@ -341,9 +341,9 @@ body {
   }
   
   h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0 0 1rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
     color: var(--text-color);
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
@@ -351,7 +351,7 @@ body {
   }
   
   .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
@@ -501,15 +501,15 @@ body {
 /* 10. Responsive improvements */
 @media (max-width: 768px) {
   .minimal-hero {
-    margin: -1rem -1rem 2rem;
-    padding: 3rem 1rem;
+    margin: -1rem -1rem 1.5rem;
+    padding: 2rem 1rem;
     
     h1 {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
     
     .subtitle {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
   
