@@ -37,7 +37,7 @@ BEMに統一:
 - 既存のMinimal Mistakesクラスは変更しない
 
 #### Phase 2: カスタムクラスの整理
-- `.minimal-hero` → `.hero-section--minimal`
+- ✅ `.minimal-hero` → `.hero-section` (PR#24で完了)
 - `.gradient-bg` → `.background--gradient`
 - `.fade-in` → `.animation--fade-in`
 
