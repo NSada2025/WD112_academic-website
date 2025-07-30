@@ -424,9 +424,13 @@
     setTimeout(() => announcement.remove(), 1000);
   }
 
-  // Add enhanced styles
-  const enhancedStyles = `
-    <style id="theme-switcher-enhanced-styles">
+  // Create style element safely
+  function addEnhancedStyles() {
+    const styleElement = document.createElement('style');
+    styleElement.id = 'theme-switcher-enhanced-styles';
+    
+    // Define styles without HTML tags
+    const styleContent = `
       /* Enhanced Theme Panel Styles */
       .theme-controls {
         position: fixed;
@@ -668,17 +672,25 @@
         animation-duration: 0s !important;
         transition-duration: 0s !important;
       }
-    </style>
-  `;
+    `;
+    
+    // Set text content safely
+    styleElement.textContent = styleContent;
+    
+    // Add to head if not already present
+    if (!document.getElementById('theme-switcher-enhanced-styles')) {
+      document.head.appendChild(styleElement);
+    }
+  }
 
   // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      document.head.insertAdjacentHTML('beforeend', enhancedStyles);
+      addEnhancedStyles();
       init();
     });
   } else {
-    document.head.insertAdjacentHTML('beforeend', enhancedStyles);
+    addEnhancedStyles();
     init();
   }
 })();
