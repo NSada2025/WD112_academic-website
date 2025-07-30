@@ -317,8 +317,8 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* 2. Hero section improvements */
-.minimal-hero {
+/* 2. Hero section improvements - BEM structure */
+.hero-section {
   position: relative;
   padding: 2.5rem 0;
   margin: -2rem -2rem 2rem;
@@ -340,7 +340,7 @@ body {
     z-index: -1;
   }
   
-  h1 {
+  &__title {
     font-size: 2.2rem;
     font-weight: 600;
     margin: 0 0 0.75rem;
@@ -350,7 +350,7 @@ body {
     animation-delay: 0.2s;
   }
   
-  .subtitle {
+  &__subtitle {
     font-size: 1.1rem;
     color: var(--text-light);
     max-width: 600px;
@@ -358,6 +358,19 @@ body {
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
     animation-delay: 0.4s;
+  }
+}
+
+/* Legacy support - will be removed in future */
+.minimal-hero {
+  @extend .hero-section;
+  
+  h1 {
+    @extend .hero-section__title;
+  }
+  
+  .subtitle {
+    @extend .hero-section__subtitle;
   }
 }
 
@@ -500,17 +513,20 @@ body {
 
 /* 10. Responsive improvements */
 @media (max-width: 768px) {
+  .hero-section,
   .minimal-hero {
     margin: -1rem -1rem 1.5rem;
     padding: 2rem 1rem;
-    
-    h1 {
-      font-size: 1.75rem;
-    }
-    
-    .subtitle {
-      font-size: 1rem;
-    }
+  }
+  
+  .hero-section__title,
+  .minimal-hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero-section__subtitle,
+  .minimal-hero .subtitle {
+    font-size: 1rem;
   }
   
   .page__content {

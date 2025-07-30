@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ========== Enhanced hero animation on page load ==========
-    const heroSection = document.querySelector('.minimal-hero');
+    const heroSection = document.querySelector('.hero-section, .minimal-hero'); // Support both during transition
     if (heroSection) {
         heroSection.classList.add('gradient-bg');
     }
