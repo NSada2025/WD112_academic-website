@@ -68,6 +68,10 @@ header:
 * **[Prevention of neurological complications of surgery by developing a nerve-sparing navigation system](https://link-j.g.kuroco-img.app/v=1730801790/files/topics/44108_ext_6_0.pdf)**  
   Sada N. and Kisaki T., MedTech Entrepreneurship Symposium, Osaka, Japan, Jun 2024
 
+* **Raman spectroscopy-based surgical navigation system for nerve preservation**  
+  Team "Future Medical Innovators", Photonics Challenge 2025 Final Presentation, Feb 2025  
+  🏆 **Finalist** (Idea Division)
+
 * **Traumatic brain injury and basic research**  
   Sada N., Japan and U.S. Emergency Web Conference, Osaka, Japan, Sep 2021
 
@@ -107,6 +111,7 @@ header:
 
 ## Awards & Honors
 ------
+* **[Photonics Challenge 2025 Finalist](https://www.gpi.ac.jp/social/pc/2025news/)**, Idea Division, Team "Future Medical Innovators", 2025
 * **JSPS Research Fellowship for Young Scientists (DC1)**, 2023-2026 ([KAKENHI-PROJECT-24KJ1662](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1662/))
 * **[Yamamura Prize](https://www.med.osaka-u.ac.jp/wp-content/uploads/2025/06/R6YamamuraPrizeWinner-List.pdf)** (graduation honors), Osaka University Faculty of Medicine, 2021 - *See 令和2年度 (2020) in the linked document*
 * **Pathophysiology Excellence Award**, Japanese Association of Anatomists, 2021
