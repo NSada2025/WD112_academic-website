@@ -136,7 +136,7 @@ header:
 * **Animal Research**: Mouse behavioral testing, Stereotaxic surgery, TBI models
 * **Protein Biochemistry**: Protein expression and purification, Crystallography
 * **Data Analysis**: Statistical analysis, Omics data interpretation
-* **Languages**: Japanese (Native), English (Professional proficiency)
+* **Languages**: Japanese (Native), English (Professional proficiency - TOEFL iBT 92/120)
 
 ---
 *Last updated: June 2025*
