@@ -52,6 +52,12 @@ header:
   * Performed protein crystallization and 3D structural analysis
   * [Kishimoto International Exchange Scholarship](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/h29Kishimoto/MD_foreig_short_stay.pdf)
 
+* **Global Health Research Internship**, JICA/University Teaching Hospital, Lusaka, Zambia, Aug 2018
+  * Investigated TB/AIDS co-infection epidemiology in sub-Saharan Africa
+  * Conducted field research at local healthcare facilities
+  * Presented findings at the 36th Annual Meeting of Japan Association for Global Health
+  * [Kishimoto International Exchange Scholarship](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/4_kikaku1-G3.pdf)
+
 ## Publications
 ------
 1. **Sada, N.**, Fujita, Y., Mizuta, N. et al. Inhibition of HDAC increases BDNF expression and promotes neuronal rewiring and functional recovery after brain injury. *Cell Death & Disease* 11, 655 (2020). [https://doi.org/10.1038/s41419-020-02897-w](https://doi.org/10.1038/s41419-020-02897-w)
@@ -118,7 +124,10 @@ header:
 
 * **Training Program for MD-PhD Researchers**, Osaka University Faculty of Medicine, Apr 2016 - Mar 2021
 
-* **JICA Intern**, Global Health Project on TB/AIDS co-infection in Zambia, Aug 2018
+* **Global Health Research Internship**, JICA Project on TB/AIDS co-infection, Lusaka, Zambia, Aug 2018
+  * Studied public health challenges in developing countries
+  * Participated in field research on infectious disease control
+  * [Kishimoto International Exchange Scholarship Report](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/4_kikaku1-G3.pdf)
 
 ## Technical Skills
 ------
