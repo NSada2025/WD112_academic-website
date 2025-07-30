@@ -85,7 +85,9 @@
 
   // Create enhanced theme control UI
   function createThemeControls() {
-    const controlsHTML = `
+    // Create container element
+    const container = document.createElement('div');
+    container.innerHTML = `
       <div class="theme-controls">
         <button class="theme-panel-toggle" aria-label="Open theme settings" title="Theme Settings">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -153,7 +155,8 @@
       </div>
     `;
 
-    document.body.insertAdjacentHTML('beforeend', controlsHTML);
+    // Append the first child of container to body
+    document.body.appendChild(container.firstElementChild);
   }
 
   // Generate color theme HTML by category
