@@ -97,6 +97,25 @@ body {
   }
 }
 
+/* Sidebar theme integration */
+.sidebar {
+  @media screen and (min-width: $sidebar-screen-min-width) {
+    // Theme-aware background with transparency
+    background-color: var(--card-bg);
+    opacity: 0.98;
+    
+    // Dark mode specific adjustments
+    [data-theme="dark"] & {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    // Light mode specific adjustments
+    [data-theme="light"] & {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+  }
+}
+
 /* Footer improvements */
 .page__footer {
   background: var(--card-bg);
