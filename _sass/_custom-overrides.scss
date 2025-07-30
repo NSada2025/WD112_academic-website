@@ -519,3 +519,75 @@ body {
     }
   }
 }
+
+/* 11. Paper card components - BEM structure */
+.paper-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      
+      &:hover {
+        color: var(--link-color);
+      }
+    }
+  }
+  
+  &__authors {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+  
+  &__venue {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  &__impact {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  &__keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+.keyword-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--primary-100);
+  color: var(--primary-700);
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: var(--primary-200);
+    transform: translateY(-1px);
+  }
+}
