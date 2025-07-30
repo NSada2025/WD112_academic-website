@@ -50,6 +50,7 @@ header:
 * **Spring Research Internship**, Samar Hasnain Laboratory, University of Liverpool, Feb - Mar 2018
   * Expressed and purified SOD1 and TDP43 proteins in E. coli
   * Performed protein crystallization and 3D structural analysis
+  * [Kishimoto International Exchange Scholarship](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/h29Kishimoto/MD_foreig_short_stay.pdf)
 
 ## Publications
 ------
@@ -105,7 +106,7 @@ header:
 * **Pathophysiology Excellence Award**, Japanese Association of Anatomists, 2021
 * **Junior Investigator Poster Award**, Japan Neuroscience Society, 2018
 * **Intellectual Property Management Prize** & **Risk Management Prize**, Medical Device Design Course, 2023
-* **Kishimoto International Exchange Scholarship**, 2018
+* **[Kishimoto International Exchange Scholarship](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/h29Kishimoto/MD_foreig_short_stay.pdf)**, 2018
 
 ## Professional Development
 ------
