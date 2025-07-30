@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 header:
   overlay_image: "hero/hero-main.png"
-  overlay_filter: 0.3
+  overlay_filter: 0.45
   caption: "Research Network Visualization"
 ---
 

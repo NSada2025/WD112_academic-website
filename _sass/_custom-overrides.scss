@@ -114,6 +114,17 @@ body {
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     }
   }
+  
+  // Tablet optimizations
+  @media (min-width: $medium) and (max-width: $large - 1px) {
+    .author__avatar img {
+      max-width: 120px;  // Smaller avatar on tablets
+    }
+    
+    .author__bio {
+      font-size: 0.9rem;
+    }
+  }
 }
 
 /* Footer improvements */
