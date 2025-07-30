@@ -13,8 +13,14 @@ header:
 ---
 
 <div class="hero-section">
-  <h1 class="hero-section__title">Naoki Sada</h1>
-  <p class="hero-section__subtitle">Exploring the molecular basis of neurodegeneration through protein aggregation research</p>
+  <div class="hero-section__background">
+    <div class="hero-section__shape hero-section__shape--circle"></div>
+    <div class="hero-section__shape hero-section__shape--triangle"></div>
+  </div>
+  <div class="hero-section__content">
+    <h1 class="hero-section__title">Naoki Sada</h1>
+    <p class="hero-section__subtitle">Exploring the molecular basis of neurodegeneration through protein aggregation research</p>
+  </div>
 </div>
 
 I am a physician-scientist investigating the fundamental mechanisms of neurodegenerative diseases at Osaka University. My research focuses on understanding how protein misfolding and aggregation contribute to neuronal dysfunction, with particular emphasis on Multiple System Atrophy and Huntington's disease.

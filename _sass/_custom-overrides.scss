@@ -317,15 +317,16 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* 2. Hero section improvements - BEM structure */
+/* 2. Enhanced Hero section - BEM structure with advanced animations */
 .hero-section {
   position: relative;
-  padding: 2.5rem 0;
+  padding: 3rem 0;
   margin: -2rem -2rem 2rem;
   text-align: center;
   overflow: hidden;
+  min-height: 400px;
   
-  /* Animated gradient background */
+  /* Animated gradient background with floating elements */
   &::before {
     content: '';
     position: absolute;
@@ -340,24 +341,99 @@ body {
     z-index: -1;
   }
   
+  /* Floating geometric shapes for visual interest */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(45deg, var(--primary-200), transparent);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    opacity: 0.08;
+    animation: heroFloat 25s infinite ease-in-out;
+    z-index: -1;
+  }
+  
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  &__shape {
+    position: absolute;
+    opacity: 0.06;
+    pointer-events: none;
+    
+    &--circle {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(90deg, var(--primary-300), transparent);
+      border-radius: 50%;
+      bottom: 20%;
+      left: 10%;
+      animation: heroFloat2 22s infinite ease-in-out;
+    }
+    
+    &--triangle {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary-400), transparent);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      top: 25%;
+      right: 25%;
+      animation: heroFloat3 18s infinite ease-in-out;
+    }
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 10;
+  }
+  
   &__title {
-    font-size: 2.2rem;
-    font-weight: 600;
-    margin: 0 0 0.75rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
     color: var(--text-color);
+    line-height: 1.2;
+    
+    /* Enhanced text animation with stagger effect */
     opacity: 0;
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.2s;
+    transform: translateY(30px);
+    animation: heroTitleReveal 1.2s ease forwards;
+    animation-delay: 0.3s;
+    
+    /* Gradient text effect on hover */
+    background: linear-gradient(135deg, var(--text-color), var(--primary-600));
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      -webkit-text-fill-color: transparent;
+      transform: scale(1.02);
+    }
   }
   
   &__subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--text-light);
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
+    line-height: 1.6;
+    
+    /* Staggered subtitle animation */
     opacity: 0;
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.4s;
+    transform: translateY(20px);
+    animation: heroSubtitleReveal 1s ease forwards;
+    animation-delay: 0.6s;
   }
 }
 
@@ -374,7 +450,7 @@ body {
   }
 }
 
-/* 3. Fade-in animation keyframes */
+/* 3. Enhanced animation keyframes */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -383,6 +459,60 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Hero-specific animations */
+@keyframes heroTitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroSubtitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating shape animations */
+@keyframes heroFloat {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg) scale(1); 
+  }
+  33% { 
+    transform: translate(30px, -20px) rotate(120deg) scale(1.1); 
+  }
+  66% { 
+    transform: translate(-15px, 25px) rotate(240deg) scale(0.9); 
+  }
+}
+
+@keyframes heroFloat2 {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1); 
+  }
+  50% { 
+    transform: translate(40px, -30px) scale(1.2); 
+  }
+}
+
+@keyframes heroFloat3 {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg); 
+  }
+  50% { 
+    transform: translate(-25px, -35px) rotate(180deg); 
   }
 }
 
@@ -517,11 +647,12 @@ body {
   .minimal-hero {
     margin: -1rem -1rem 1.5rem;
     padding: 2rem 1rem;
+    min-height: 300px;
   }
   
   .hero-section__title,
   .minimal-hero h1 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   
   .hero-section__subtitle,
@@ -529,10 +660,51 @@ body {
     font-size: 1rem;
   }
   
+  /* Hide some floating shapes on mobile for performance */
+  .hero-section__shape--triangle {
+    display: none;
+  }
+  
   .page__content {
     p {
       font-size: 1rem;
     }
+  }
+}
+
+/* 11. Accessibility: Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-section {
+    &::before {
+      animation: none;
+    }
+    
+    &::after {
+      animation: none;
+    }
+    
+    &__shape {
+      animation: none;
+    }
+    
+    &__title {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+    
+    &__subtitle {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+  
+  /* Disable all floating animations for accessibility */
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
