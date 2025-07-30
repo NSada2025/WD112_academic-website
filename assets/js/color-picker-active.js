@@ -63,23 +63,14 @@
     `;
 
     // Find or create container
-    let colorPickerContainer = document.querySelector('.color-picker-container');
+    let colorPickerContainer = document.querySelector('.simple-color-picker');
     if (!colorPickerContainer) {
-      // Check if theme-controls exists
-      const themeControls = document.querySelector('.theme-controls');
-      if (themeControls) {
-        // Add to existing theme controls
-        colorPickerContainer = document.createElement('div');
-        colorPickerContainer.className = 'color-picker-container';
-        colorPickerContainer.innerHTML = colorPickerHTML;
-        themeControls.appendChild(colorPickerContainer);
-      } else {
-        // Create standalone container
-        colorPickerContainer = document.createElement('div');
-        colorPickerContainer.className = 'theme-controls color-picker-container';
-        colorPickerContainer.innerHTML = colorPickerHTML;
-        document.body.appendChild(colorPickerContainer);
-      }
+      // Create standalone container with unique class
+      colorPickerContainer = document.createElement('div');
+      colorPickerContainer.className = 'simple-color-picker';
+      colorPickerContainer.innerHTML = colorPickerHTML;
+      colorPickerContainer.style.cssText = 'position: fixed; bottom: 8rem; right: 2rem; z-index: 9998;';
+      document.body.appendChild(colorPickerContainer);
     }
 
     // Get elements
