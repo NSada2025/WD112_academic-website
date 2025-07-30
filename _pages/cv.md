@@ -9,7 +9,6 @@ excerpt: "Curriculum Vitae of Naoki Sada, M.D., PhD student at Osaka University 
 header:
   overlay_image: "hero/hero-network-6.png"
   overlay_filter: 0.3
-  caption: "Professional Academic Profile"
 ---
 
 {% include base_path %}
