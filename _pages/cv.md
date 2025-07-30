@@ -50,13 +50,13 @@ header:
 * **Spring Research Internship**, Samar Hasnain Laboratory, University of Liverpool, Feb - Mar 2018
   * Expressed and purified SOD1 and TDP43 proteins in E. coli
   * Performed protein crystallization and 3D structural analysis
-  * [Kishimoto International Exchange Scholarship](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/h29Kishimoto/MD_foreig_short_stay.pdf)
+  * [Kishimoto International Exchange Scholarship](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/h29Kishimoto/MD_foreig_short_stay.pdf) - Structural biology of neurodegenerative disease proteins
 
 * **Global Health Research Internship**, JICA/University Teaching Hospital, Lusaka, Zambia, Aug 2018
   * Investigated TB/AIDS co-infection epidemiology in sub-Saharan Africa
   * Conducted field research at local healthcare facilities
   * Presented findings at the 36th Annual Meeting of Japan Association for Global Health
-  * [Kishimoto International Exchange Scholarship](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/4_kikaku1-G3.pdf)
+  * [Kishimoto International Exchange Scholarship](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/4_kikaku1-G3.pdf) - Public health fieldwork in resource-limited settings
 
 ## Publications
 ------
@@ -117,7 +117,6 @@ header:
 * **Pathophysiology Excellence Award**, Japanese Association of Anatomists, 2021
 * **Junior Investigator Poster Award**, Japan Neuroscience Society, 2018
 * **Intellectual Property Management Prize** & **Risk Management Prize**, Medical Device Design Course, 2023
-* **[Kishimoto International Exchange Scholarship](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/h29Kishimoto/MD_foreig_short_stay.pdf)**, 2018
 
 ## Professional Development
 ------
@@ -129,10 +128,9 @@ header:
 
 * **Training Program for MD-PhD Researchers**, Osaka University Faculty of Medicine, Apr 2016 - Mar 2021
 
-* **Global Health Research Internship**, JICA Project on TB/AIDS co-infection, Lusaka, Zambia, Aug 2018
-  * Studied public health challenges in developing countries
-  * Participated in field research on infectious disease control
-  * [Kishimoto International Exchange Scholarship Report](https://www.med.osaka-u.ac.jp/wp-content/uploads/gakuseishien/sholarship/4_kikaku1-G3.pdf)
+* **JICA Global Health Program**, Lusaka, Zambia, Aug 2018
+  * Studied public health challenges and TB/AIDS co-infection in sub-Saharan Africa
+  * Participated in field research on infectious disease control at University Teaching Hospital
 
 ## Technical Skills
 ------
