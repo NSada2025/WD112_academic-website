@@ -1,29 +1,36 @@
 /**
- * Color Picker - Active Version (PR#14)
- * Purpose: Implement actual color switching without persistence
- * Safe: Only changes DOM attributes temporarily, no localStorage
+ * Color Picker with localStorage - PR#15
+ * Purpose: Persist color selection across page reloads
+ * Based on color-picker-active.js with localStorage integration
  */
 
 (function() {
   'use strict';
 
-  // Wait for theme system to initialize
-  function waitForThemeSystem(callback) {
-    const checkInterval = setInterval(() => {
-      if (document.documentElement.getAttribute('data-color')) {
-        clearInterval(checkInterval);
-        callback();
-      }
-    }, 100);
+  // Storage key
+  const STORAGE_KEY = 'site-color-palette';
+
+  // Initialize with localStorage support
+  function initializeColorPicker(callback) {
+    // Try to load saved color from localStorage
+    const savedColor = localStorage.getItem(STORAGE_KEY);
+    const defaultColor = 'blue';
     
-    // Timeout after 5 seconds
-    setTimeout(() => clearInterval(checkInterval), 5000);
+    // Validate saved color
+    const validColors = ['blue', 'zinc', 'rose', 'green', 'violet', 'orange', 'teal'];
+    const colorToUse = (savedColor && validColors.includes(savedColor)) ? savedColor : defaultColor;
+    
+    // Set the color attribute
+    document.documentElement.setAttribute('data-color', colorToUse);
+    console.log('[Color Picker LS] Initialized with color:', colorToUse, savedColor ? '(from localStorage)' : '(default)');
+    
+    callback();
   }
 
-  function createActiveColorPicker() {
+  function createColorPickerWithStorage() {
     // Get current color from DOM
     const currentColor = document.documentElement.getAttribute('data-color') || 'blue';
-    console.log('[Color Picker Active] Current color:', currentColor);
+    console.log('[Color Picker LS] Current color:', currentColor);
 
     // Color options (matching _variables.scss)
     const colors = [
@@ -57,7 +64,7 @@
           `).join('')}
         </div>
         <p class="color-picker-note" style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-light);">
-          Changes are temporary (reload to reset)
+          Your color choice is saved automatically
         </p>
       </div>
     `;
@@ -81,7 +88,7 @@
       const isOpen = panel.classList.contains('open');
       panel.classList.toggle('open');
       panel.setAttribute('aria-hidden', isOpen);
-      console.log('[Color Picker Active] Panel toggled:', !isOpen ? 'open' : 'closed');
+      console.log('[Color Picker LS] Panel toggled:', !isOpen ? 'open' : 'closed');
     });
 
     // Close panel when clicking outside
@@ -93,14 +100,21 @@
       }
     });
 
-    // Handle color selection - This is the main change from PR#13
+    // Handle color selection with localStorage
     colorPickerContainer.querySelectorAll('.color-option').forEach(option => {
       option.addEventListener('click', () => {
         const selectedColor = option.dataset.color;
         
         // Apply the color change
         document.documentElement.setAttribute('data-color', selectedColor);
-        console.log('[Color Picker Active] Color changed to:', selectedColor);
+        
+        // Save to localStorage
+        try {
+          localStorage.setItem(STORAGE_KEY, selectedColor);
+          console.log('[Color Picker LS] Color saved to localStorage:', selectedColor);
+        } catch (e) {
+          console.error('[Color Picker LS] Failed to save to localStorage:', e);
+        }
         
         // Update active states
         colorPickerContainer.querySelectorAll('.color-option').forEach(opt => {
@@ -111,12 +125,11 @@
         announceColorChange(selectedColor);
         
         // Log success
-        console.log('[Color Picker Active] Color successfully applied:', selectedColor);
-        console.log('[Color Picker Active] CSS variables should now update automatically');
+        console.log('[Color Picker LS] Color changed and persisted:', selectedColor);
       });
     });
 
-    console.log('[Color Picker Active] Color picker activated successfully');
+    console.log('[Color Picker LS] Color picker with localStorage activated successfully');
   }
 
   // Announce color change for screen readers
@@ -144,9 +157,9 @@
   // Initialize when ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      waitForThemeSystem(createActiveColorPicker);
+      initializeColorPicker(createColorPickerWithStorage);
     });
   } else {
-    waitForThemeSystem(createActiveColorPicker);
+    initializeColorPicker(createColorPickerWithStorage);
   }
 })();
