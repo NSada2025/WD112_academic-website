@@ -168,26 +168,35 @@
 
 .page__hero-caption {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0 auto;
-  padding: 2px 5px;
+  bottom: 1rem;
+  right: 1rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
   color: #fff;
   font-family: $caption-font-family;
   font-size: $type-size-7;
-  background: #000;
+  background: rgba(0, 0, 0, 0.7);
   text-align: right;
   z-index: 5;
-  opacity: 0.5;
-  border-radius: $border-radius 0 $border-radius 0;
+  border-radius: $border-radius;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  max-width: 50%;
 
   @include breakpoint($large) {
-    padding: 5px 10px;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: $type-size-6;
   }
 
   a {
     color: #fff;
     text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
