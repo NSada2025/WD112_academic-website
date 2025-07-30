@@ -85,4 +85,17 @@
 
   console.log('=== Color System Debug End ===');
   console.log('Next step: Check console for any errors or unexpected values');
+  
+  // 6. Check if theme-switcher initialized
+  console.log('6. Theme Switcher Status:');
+  console.log('  - DOM ready state:', document.readyState);
+  console.log('  - Scripts loaded:', !!window.ThemeSwitcher || 'ThemeSwitcher not found');
+  
+  // Try to manually apply stored values (safe test)
+  setTimeout(() => {
+    console.log('7. Delayed check (after 1 second):');
+    console.log('  - data-theme:', document.documentElement.getAttribute('data-theme'));
+    console.log('  - data-color:', document.documentElement.getAttribute('data-color'));
+    console.log('  - Is theme applied now?', document.documentElement.getAttribute('data-theme') !== null);
+  }, 1000);
 })();
