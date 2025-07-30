@@ -22,7 +22,7 @@ header:
   * Advisor: Prof. Toshihide Yamashita
   
 * **Doctor of Medicine (M.D.)**, Osaka University Faculty of Medicine, 2015 - 2021
-  * **Yamamura Prize** (graduation honors, top 3 out of 115 graduates)
+  * **[Yamamura Prize](https://www.med.osaka-u.ac.jp/wp-content/uploads/2025/06/R6YamamuraPrizeWinner-List.pdf)** (graduation honors, top 3 out of 115 graduates)
   
 * **Research Internship**, Barkla X-ray Laboratory of Biophysics, University of Liverpool, UK, Feb - Mar 2018
   * Supervisor: Prof. Samar Hasnain
@@ -101,7 +101,7 @@ header:
 ## Awards & Honors
 ------
 * **JSPS Research Fellowship for Young Scientists (DC1)**, 2023-2026 ([KAKENHI-PROJECT-24KJ1662](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1662/))
-* **Yamamura Prize** (graduation honors), Osaka University Faculty of Medicine, 2021
+* **[Yamamura Prize](https://www.med.osaka-u.ac.jp/wp-content/uploads/2025/06/R6YamamuraPrizeWinner-List.pdf)** (graduation honors), Osaka University Faculty of Medicine, 2021
 * **Pathophysiology Excellence Award**, Japanese Association of Anatomists, 2021
 * **Junior Investigator Poster Award**, Japan Neuroscience Society, 2018
 * **Intellectual Property Management Prize** & **Risk Management Prize**, Medical Device Design Course, 2023
