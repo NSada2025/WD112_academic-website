@@ -26,4 +26,202 @@
   });
 </script>
 
+<!-- Custom CSS for hero animations -->
+<style>
+/* Enhanced Hero section - BEM structure with advanced animations */
+.hero-section {
+  position: relative;
+  padding: 3rem 0;
+  margin: -2rem -2rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(90, 143, 163, 0.1), rgba(212, 165, 165, 0.1));
+  background-size: 200% 200%;
+  animation: gradientShift 20s ease infinite;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, rgba(90, 143, 163, 0.2), transparent);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  opacity: 0.08;
+  animation: heroFloat 25s infinite ease-in-out;
+  z-index: -1;
+}
+
+.hero-section__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-section__shape {
+  position: absolute;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.hero-section__shape--circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(90deg, rgba(90, 143, 163, 0.3), transparent);
+  border-radius: 50%;
+  bottom: 20%;
+  left: 10%;
+  animation: heroFloat2 22s infinite ease-in-out;
+}
+
+.hero-section__shape--triangle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(90, 143, 163, 0.4), transparent);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 25%;
+  right: 25%;
+  animation: heroFloat3 18s infinite ease-in-out;
+}
+
+.hero-section__content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-section__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroTitleReveal 1.2s ease forwards;
+  animation-delay: 0.3s;
+  transition: all 0.3s ease;
+}
+
+.hero-section__title:hover {
+  transform: scale(1.02);
+}
+
+.hero-section__subtitle {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroSubtitleReveal 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes heroTitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroSubtitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFloat {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg) scale(1); 
+  }
+  33% { 
+    transform: translate(30px, -20px) rotate(120deg) scale(1.1); 
+  }
+  66% { 
+    transform: translate(-15px, 25px) rotate(240deg) scale(0.9); 
+  }
+}
+
+@keyframes heroFloat2 {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1); 
+  }
+  50% { 
+    transform: translate(40px, -30px) scale(1.2); 
+  }
+}
+
+@keyframes heroFloat3 {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg); 
+  }
+  50% { 
+    transform: translate(-25px, -35px) rotate(180deg); 
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    margin: -1rem -1rem 1.5rem;
+    padding: 2rem 1rem;
+    min-height: 300px;
+  }
+  .hero-section__title {
+    font-size: 2rem;
+  }
+  .hero-section__subtitle {
+    font-size: 1rem;
+  }
+  .hero-section__shape--triangle {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-section::before,
+  .hero-section::after,
+  .hero-section__shape {
+    animation: none;
+  }
+  .hero-section__title,
+  .hero-section__subtitle {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+</style>
+
 <!-- end custom head snippets -->
