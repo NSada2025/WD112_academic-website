@@ -12,7 +12,7 @@ remote_theme             : "academicpages/academicpages.github.io"
 
 author:
   name             : "Naoki Sada, M.D."
-  avatar           : "images/profile.png"  # Custom profile image
+  avatar           : "/images/profile.png"  # Custom profile image
   bio              : "3rd year PhD student studying neurodegeneration and protein aggregation at Osaka University | JSPS Research Fellow (DC1)"
   location         : "Osaka, Japan"
   email            : "naoki.s.sound.of.sil@gmail.com"
